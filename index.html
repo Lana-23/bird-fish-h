@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title data-i18n="app_title">Bird & Fish Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-content">
+            <h1 class="logo" data-i18n="app_title">🦅 🐟 Tracker</h1>
+            <div class="nav-controls">
+                <select id="language-select" class="language-select">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                </select>
+                <button class="theme-toggle" id="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="birds" data-i18n="birds">🦅 Birds</button>
+            <button class="tab-btn" data-tab="fish" data-i18n="fish">🐟 Fish</button>
+            <button class="tab-btn" data-tab="sightings" data-i18n="sightings">📝 Sightings</button>
+            <button class="tab-btn" data-tab="stats" data-i18n="stats">📊 Stats</button>
+        </div>
+
+        <!-- Birds Tab -->
+        <section id="birds-tab" class="tab-content active">
+            <div class="categories">
+                <button class="category-btn active" data-category="all" data-i18n="all_birds">All Birds</button>
+                <button class="category-btn" data-category="european" data-i18n="european">European</button>
+                <button class="category-btn" data-category="tropical" data-i18n="tropical">Tropical</button>
+            </div>
+            <div class="species-grid" id="birds-grid"></div>
+        </section>
+
+        <!-- Fish Tab -->
+        <section id="fish-tab" class="tab-content">
+            <div class="categories">
+                <button class="category-btn active" data-category="all" data-i18n="all_fish">All Fish</button>
+                <button class="category-btn" data-category="river" data-i18n="river">River</button>
+                <button class="category-btn" data-category="mediterranean" data-i18n="mediterranean">Mediterranean</button>
+                <button class="category-btn" data-category="tropical" data-i18n="tropical">Tropical</button>
+            </div>
+            <div class="species-grid" id="fish-grid"></div>
+        </section>
+
+        <!-- Sightings Tab -->
+        <section id="sightings-tab" class="tab-content">
+            <div class="sightings-container">
+                <div class="add-sighting">
+                    <h2 data-i18n="log_sighting">Log a Sighting</h2>
+                    <div class="sighting-form">
+                        <div class="form-group">
+                            <label data-i18n="select_species">Select Species:</label>
+                            <select id="species-select">
+                                <option value="">-- Choose --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="select_date">Date:</label>
+                            <input type="date" id="sighting-date">
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="notes">Notes:</label>
+                            <textarea id="sighting-notes" placeholder="Optional notes..."></textarea>
+                        </div>
+                        <button class="btn-primary" id="add-sighting-btn" data-i18n="add_sighting">Add Sighting</button>
+                    </div>
+                </div>
+
+                <div class="sightings-list">
+                    <h2 data-i18n="recent_sightings">Recent Sightings</h2>
+                    <div id="sightings-display"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Tab -->
+        <section id="stats-tab" class="tab-content">
+            <div class="stats-container">
+                <div class="stats-summary">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-sightings">0</div>
+                        <div class="stat-label" data-i18n="total_sightings">Total Sightings</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="unique-species">0</div>
+                        <div class="stat-label" data-i18n="unique_species">Unique Species</div>
+                    </div>
+                </div>
+
+                <div class="stats-breakdown">
+                    <h3 data-i18n="by_type">By Type</h3>
+                    <div id="stats-by-type"></div>
+                </div>
+
+                <div class="stats-calendar">
+                    <h3 data-i18n="sightings_by_date">Sightings by Date</h3>
+                    <div id="stats-calendar"></div>
+                </div>
+
+                <button class="btn-secondary" id="clear-all-btn" data-i18n="clear_all_data">Clear All Data</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Detail Modal -->
+    <div class="modal" id="detail-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="detail-body">
+                <img class="detail-image" id="detail-image" src="" alt="">
+                <div class="detail-info">
+                    <h2 id="detail-name"></h2>
+                    <p class="detail-category" id="detail-category"></p>
+                    <p class="detail-description" id="detail-description"></p>
+                    <button class="btn-primary" id="quick-sighting-btn" data-i18n="mark_seen_today">Mark as Seen Today</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
