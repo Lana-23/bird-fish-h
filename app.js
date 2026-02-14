@@ -375,6 +375,13 @@ function renderSpeciesGrid() {
         filtered = species.filter(s => s.category === currentCategory);
     }
 
+    // Sort alphabetically by species name in current language
+    filtered.sort((a, b) => {
+        const nameA = getSpeciesName(a).toLowerCase();
+        const nameB = getSpeciesName(b).toLowerCase();
+        return nameA.localeCompare(nameB, currentLanguage === 'ru' ? 'ru' : 'en');
+    });
+
     grid.innerHTML = filtered.map(species => `
         <div class="species-card" onclick="showDetail('${species.id}', '${type}')">
             <div class="species-image" style="background-image: url('assets/images/${species.id}.jpg'); background-size: cover; background-position: center;">
@@ -421,7 +428,7 @@ function updateSpeciesSelect() {
     const allSpecies = [
         ...speciesData.birds.map(b => ({ id: b.id, name: getSpeciesName(b), type: 'bird' })),
         ...speciesData.fish.map(f => ({ id: f.id, name: getSpeciesName(f), type: 'fish' }))
-    ].sort((a, b) => a.name.localeCompare(b.name));
+    ].sort((a, b) => a.name.localeCompare(b.name, currentLanguage === 'ru' ? 'ru' : 'en'));
 
     select.innerHTML = '<option value="">-- ' + t('select_species') + ' --</option>' +
         allSpecies.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
