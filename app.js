@@ -384,8 +384,7 @@ function renderSpeciesGrid() {
 
     grid.innerHTML = filtered.map(species => `
         <div class="species-card" onclick="showDetail('${species.id}', '${type}')">
-            <div class="species-image" style="background-image: url('./assets/images/${species.id}.jpg'); background-size: cover; background-position: center;" onerror="this.style.backgroundImage='linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)'" title="Loading image for ${species.id}">
-                <span class="image-emoji">${species.image}</span>
+            <div class="species-image" style="background-image: url('./assets/images/${species.id}.jpg'); background-size: cover; background-position: center;" title="Loading image for ${species.id}">
             </div>
             <div class="species-info">
                 <div class="species-name">${getSpeciesName(species)}</div>
@@ -405,23 +404,21 @@ function showDetail(speciesId, type) {
     const detailImage = document.getElementById('detail-image');
     const imageUrl = `./assets/images/${species.id}.jpg`;
     
-    // Try to load image with fallback
+    // Load image with fallback to gradient background
     const img = new Image();
     img.onload = () => {
         detailImage.style.backgroundImage = `url('${imageUrl}')`;
+        detailImage.textContent = '';
     };
     img.onerror = () => {
         detailImage.style.backgroundImage = `linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)`;
-        detailImage.textContent = species.image;
-        detailImage.style.fontSize = '6rem';
-        detailImage.style.display = 'flex';
-        detailImage.style.alignItems = 'center';
-        detailImage.style.justifyContent = 'center';
+        detailImage.textContent = '';
     };
     img.src = imageUrl;
     
     if (img.complete && img.naturalHeight !== 0) {
         detailImage.style.backgroundImage = `url('${imageUrl}')`;
+        detailImage.textContent = '';
     }
     
     const nameElement = document.getElementById('detail-name');
