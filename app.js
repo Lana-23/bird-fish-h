@@ -217,9 +217,13 @@ let selectedSpecies = null;
 document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
     setupEventListeners();
+    setTodayDate();
+    
+    // Render initial content
+    currentCategory = 'all';
     renderSpeciesGrid();
     updateSpeciesSelect();
-    setTodayDate();
+    renderSightings();
 });
 
 // Language Management
@@ -287,15 +291,19 @@ function setupEventListeners() {
     });
 
     // Category buttons
-    document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const parent = e.target.parentElement;
-            parent.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-            e.target.classList.add('active');
-            currentCategory = e.target.getAttribute('data-category');
-            renderSpeciesGrid();
+    const bindCategoryButtons = () => {
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const parent = e.target.parentElement;
+                parent.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentCategory = e.target.getAttribute('data-category');
+                renderSpeciesGrid();
+            });
         });
-    });
+    };
+    
+    bindCategoryButtons();
 
     // Add sighting
     document.getElementById('add-sighting-btn').addEventListener('click', addSighting);
@@ -349,18 +357,20 @@ function switchTab(tab) {
     });
     document.getElementById(`${tab}-tab`).classList.add('active');
 
-    if (tab === 'sightings') {
-        renderSightings();
-    } else if (tab === 'stats') {
-        renderStats();
-    }
-
-    // Reset categories
+    // Reset category to 'all' when switching tabs
+    currentCategory = 'all';
     const parent = document.querySelector(`.tab-content.active .categories`);
     if (parent) {
         parent.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
         parent.querySelector('[data-category="all"]').classList.add('active');
-        currentCategory = 'all';
+    }
+
+    if (tab === 'birds' || tab === 'fish') {
+        renderSpeciesGrid();
+    } else if (tab === 'sightings') {
+        renderSightings();
+    } else if (tab === 'stats') {
+        renderStats();
     }
 }
 
