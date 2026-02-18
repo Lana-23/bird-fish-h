@@ -202,6 +202,106 @@ const speciesData = {
             description_en: 'Venomous fish with elaborate fins that resemble a lion\'s mane. Beautiful but dangerous predator of the coral reef.',
             description_ru: 'Ядовитая рыба с перепончатыми плавниками, напоминающими львиную гриву. Красивый, но опасный хищник коралловых рифов.',
             image: '👑'
+        },
+        {
+            id: 'salmon',
+            name_en: 'Atlantic Salmon',
+            name_ru: 'Атлантический лосось',
+            latin_name: 'Salmo salar',
+            category: 'river',
+            description_en: 'Anadromous fish that migrates from ocean to rivers to spawn. Silvery body with black spots. Highly valued food fish.',
+            description_ru: 'Проходная рыба, мигрирующая из океана в реки для нереста. Серебристое тело с чёрными пятнами. Ценная промысловая рыба.',
+            image: '🐟'
+        },
+        {
+            id: 'catfish',
+            name_en: 'Wels Catfish',
+            name_ru: 'Сом обыкновенный',
+            latin_name: 'Silurus glanis',
+            category: 'river',
+            description_en: 'Large freshwater fish with long whiskers. Dark gray or brown coloring. Can grow up to 3 meters. Bottom-dwelling predator.',
+            description_ru: 'Крупная пресноводная рыба с длинными усами. Тёмно-серая или коричневая окраска. Может достигать 3 метров. Донный хищник.',
+            image: '🐠'
+        },
+        {
+            id: 'perch',
+            name_en: 'European Perch',
+            name_ru: 'Окунь европейский',
+            latin_name: 'Perca fluviatilis',
+            category: 'river',
+            description_en: 'Green body with dark vertical stripes. Sharp spines on dorsal fin. Common predator in European freshwater bodies.',
+            description_ru: 'Зелёное тело с тёмными вертикальными полосами. Острые шипы на спинном плавнике. Распространённый хищник в пресных водоёмах Европы.',
+            image: '🐟'
+        },
+        {
+            id: 'mackerel',
+            name_en: 'Atlantic Mackerel',
+            name_ru: 'Атлантическая скумбрия',
+            latin_name: 'Scomber scombrus',
+            category: 'mediterranean',
+            description_en: 'Streamlined fish with blue-green back and wavy dark stripes. Fast swimmer. Important commercial food fish.',
+            description_ru: 'Стройная рыба с сине-зелёной спиной и волнистыми тёмными полосами. Быстрый пловец. Важная промысловая рыба.',
+            image: '🐠'
+        },
+        {
+            id: 'swordfish',
+            name_en: 'Swordfish',
+            name_ru: 'Меч-рыба',
+            latin_name: 'Xiphias gladius',
+            category: 'mediterranean',
+            description_en: 'Large predatory fish with distinctive long flat bill. Dark gray above, silver below. Can reach speeds of 97 km/h.',
+            description_ru: 'Крупная хищная рыба с характерным длинным плоским мечом. Тёмно-серая сверху, серебристая снизу. Может достигать скорости 97 км/ч.',
+            image: '⚔️'
+        },
+        {
+            id: 'moray-eel',
+            name_en: 'Giant Moray Eel',
+            name_ru: 'Гигантская мурена',
+            latin_name: 'Gymnothorax javanicus',
+            category: 'tropical',
+            description_en: 'Large eel with mottled brown and yellow skin. Sharp teeth, powerful jaws. Hides in coral reef crevices.',
+            description_ru: 'Крупный угорь с пёстрой коричнево-жёлтой кожей. Острые зубы, мощные челюсти. Прячется в расщелинах коралловых рифов.',
+            image: '🐍'
+        },
+        {
+            id: 'angelfish',
+            name_en: 'Freshwater Angelfish',
+            name_ru: 'Пресноводный скалярий',
+            latin_name: 'Pterophyllum scalare',
+            category: 'tropical',
+            description_en: 'Triangular body shape with long flowing fins. Silver with vertical black stripes. Popular aquarium fish from Amazon basin.',
+            description_ru: 'Треугольная форма тела с длинными плавниками. Серебристая с вертикальными чёрными полосами. Популярная аквариумная рыба из бассейна Амазонки.',
+            image: '👼'
+        },
+        {
+            id: 'barracuda',
+            name_en: 'Great Barracuda',
+            name_ru: 'Большая барракуда',
+            latin_name: 'Sphyraena barracuda',
+            category: 'tropical',
+            description_en: 'Elongated silver fish with prominent jaw and sharp teeth. Fierce predator. Can grow up to 2 meters long.',
+            description_ru: 'Удлинённая серебристая рыба с выступающей челюстью и острыми зубами. Свирепый хищник. Может достигать 2 метров в длину.',
+            image: '🦈'
+        },
+        {
+            id: 'stingray',
+            name_en: 'Blue-spotted Stingray',
+            name_ru: 'Голубопятнистый скат-хвостокол',
+            latin_name: 'Neotrygon kuhlii',
+            category: 'tropical',
+            description_en: 'Flat body with distinctive blue spots on yellow-brown background. Venomous spine on tail. Glides along ocean floor.',
+            description_ru: 'Плоское тело с характерными голубыми пятнами на жёлто-коричневом фоне. Ядовитый шип на хвосте. Скользит по дну океана.',
+            image: '🔵'
+        },
+        {
+            id: 'seahorse',
+            name_en: 'Common Seahorse',
+            name_ru: 'Морской конёк',
+            latin_name: 'Hippocampus kuda',
+            category: 'tropical',
+            description_en: 'Unique upright swimming posture. Horse-like head, prehensile tail. Males carry eggs in brood pouch.',
+            description_ru: 'Уникальная вертикальная поза при плавании. Голова как у лошади, цепкий хвост. Самцы вынашивают икру в выводковой сумке.',
+            image: '🐴'
         }
     ]
 };
