@@ -120,6 +120,106 @@ const speciesData = {
             description_en: 'Extraordinary colorful birds from rainforests of New Guinea. Males have elaborate plumage and complex courtship displays.',
             description_ru: 'Необычайно красочные птицы из тропических лесов Новой Гвинеи. Самцы имеют сложное оперение и сложные брачные ритуалы.',
             image: '🌈'
+        },
+        {
+            id: 'hummingbird',
+            name_en: 'Ruby-throated Hummingbird',
+            name_ru: 'Рубиновогорлый колибри',
+            latin_name: 'Archilochus colubris',
+            category: 'tropical',
+            description_en: 'Tiny bird with iridescent throat feathers. Hovers while feeding on nectar. Wings beat up to 53 times per second.',
+            description_ru: 'Крошечная птица с переливающимися перьями на горле. Зависает в воздухе, питаясь нектаром. Крылья машут до 53 раз в секунду.',
+            image: '🐦'
+        },
+        {
+            id: 'flamingo',
+            name_en: 'Greater Flamingo',
+            name_ru: 'Обыкновенный фламинго',
+            latin_name: 'Phoenicopterus roseus',
+            category: 'mediterranean',
+            description_en: 'Tall wading bird with pink plumage and curved beak. Filters food from water. Lives in large flocks near saltwater lagoons.',
+            description_ru: 'Высокая болотная птица с розовым оперением и изогнутым клювом. Фильтрует пищу из воды. Живёт большими стаями у солёных лагун.',
+            image: '🦩'
+        },
+        {
+            id: 'pelican',
+            name_en: 'Great White Pelican',
+            name_ru: 'Розовый пеликан',
+            latin_name: 'Pelecanus onocrotalus',
+            category: 'mediterranean',
+            description_en: 'Large water bird with distinctive throat pouch. White plumage with black flight feathers. Excellent fish hunter.',
+            description_ru: 'Крупная водная птица с характерным горловым мешком. Белое оперение с чёрными маховыми перьями. Отличный охотник на рыбу.',
+            image: '🦢'
+        },
+        {
+            id: 'kingfisher',
+            name_en: 'Common Kingfisher',
+            name_ru: 'Зимородок обыкновенный',
+            latin_name: 'Alcedo atthis',
+            category: 'european',
+            description_en: 'Small bird with bright blue and orange plumage. Dives into water to catch fish. Perches on branches overhanging rivers.',
+            description_ru: 'Маленькая птица с ярким сине-оранжевым оперением. Ныряет в воду за рыбой. Сидит на ветвях, нависающих над реками.',
+            image: '🐦'
+        },
+        {
+            id: 'woodpecker',
+            name_en: 'Great Spotted Woodpecker',
+            name_ru: 'Большой пёстрый дятел',
+            latin_name: 'Dendrocopos major',
+            category: 'european',
+            description_en: 'Black and white woodpecker with red undertail. Drums on trees to find insects. Strong chisel-like beak for drilling.',
+            description_ru: 'Чёрно-белый дятел с красным подхвостьем. Барабанит по деревьям, добывая насекомых. Сильный клюв-долото для сверления.',
+            image: '🪵'
+        },
+        {
+            id: 'heron',
+            name_en: 'Grey Heron',
+            name_ru: 'Серая цапля',
+            latin_name: 'Ardea cinerea',
+            category: 'european',
+            description_en: 'Tall wading bird with long legs and neck. Gray plumage with black crown. Stands motionless waiting for prey.',
+            description_ru: 'Высокая болотная птица с длинными ногами и шеей. Серое оперение с чёрной макушкой. Стоит неподвижно, ожидая добычу.',
+            image: '🦢'
+        },
+        {
+            id: 'toucan',
+            name_en: 'Toco Toucan',
+            name_ru: 'Тукан токо',
+            latin_name: 'Ramphastos toco',
+            category: 'tropical',
+            description_en: 'Large colorful bill, orange with black tip. Black body with white throat. Largest member of toucan family.',
+            description_ru: 'Большой разноцветный клюв, оранжевый с чёрным кончиком. Чёрное тело с белым горлом. Крупнейший представитель семейства тукановых.',
+            image: '🦜'
+        },
+        {
+            id: 'penguin',
+            name_en: 'Emperor Penguin',
+            name_ru: 'Императорский пингвин',
+            latin_name: 'Aptenodytes forsteri',
+            category: 'mediterranean',
+            description_en: 'Largest penguin species. Black and white plumage with yellow-orange patches on neck. Dives deeper than any bird.',
+            description_ru: 'Крупнейший вид пингвинов. Чёрно-белое оперение с жёлто-оранжевыми пятнами на шее. Ныряет глубже любой другой птицы.',
+            image: '🐧'
+        },
+        {
+            id: 'swan',
+            name_en: 'Mute Swan',
+            name_ru: 'Лебедь-шипун',
+            latin_name: 'Cygnus olor',
+            category: 'european',
+            description_en: 'Large waterfowl with long curved neck. Pure white plumage with orange beak. Forms lifelong pair bonds.',
+            description_ru: 'Крупная водоплавающая птица с длинной изогнутой шеей. Чисто-белое оперение с оранжевым клювом. Образует пожизненные пары.',
+            image: '🦢'
+        },
+        {
+            id: 'hawk',
+            name_en: 'Northern Goshawk',
+            name_ru: 'Ястреб-тетеревятник',
+            latin_name: 'Accipiter gentilis',
+            category: 'european',
+            description_en: 'Medium-large bird of prey. Gray-brown plumage with red eyes. Agile forest hunter pursuing prey through trees.',
+            description_ru: 'Средне-крупная хищная птица. Серо-коричневое оперение с красными глазами. Ловкий лесной охотник, преследующий добычу среди деревьев.',
+            image: '🦅'
         }
     ],
     fish: [
