@@ -257,7 +257,7 @@ body {
 }
 
 /* Hide emoji when image has a real background (not just gradient) */
-.species-image[style*="assets/images"]::before {
+.species-image.has-image::before {
     content: '';
 }
 

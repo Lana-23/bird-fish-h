@@ -299,7 +299,7 @@ function renderSpeciesGrid() {
 
     grid.innerHTML = filtered.map(species => `
         <div class="species-card" data-species-id="${species.id}" data-type="${type}">
-            <div class="species-image" style="background-image: url('./assets/images/${species.id}.jpg'); background-size: cover; background-position: center;" title="Loading image for ${species.id}">
+            <div class="species-image has-image" style="background-image: url('./assets/images/${species.id}.jpg'); background-size: cover; background-position: center;" title="Loading image for ${species.id}">
             </div>
             <div class="species-info">
                 <div class="species-name">${getSpeciesName(species)}</div>
