@@ -221,6 +221,15 @@ body {
     background-position: center;
 }
 
+.species-image::before {
+    content: '🐟';
+    opacity: 0.5;
+}
+
+.species-card[data-type="birds"] .species-image::before {
+    content: '🦅';
+}
+
 .species-info {
     padding: 0.75rem;
     flex: 1;

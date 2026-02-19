@@ -252,7 +252,7 @@ function renderSpeciesGrid() {
     });
 
     grid.innerHTML = filtered.map(species => `
-        <div class="species-card" onclick="showDetail('${species.id}', '${type}')">
+        <div class="species-card" data-species-id="${species.id}" data-type="${type}">
             <div class="species-image" style="background-image: url('./assets/images/${species.id}.jpg'); background-size: cover; background-position: center;" title="Loading image for ${species.id}">
             </div>
             <div class="species-info">
@@ -261,6 +261,15 @@ function renderSpeciesGrid() {
             </div>
         </div>
     `).join('');
+    
+    // Add click handlers to species cards
+    grid.querySelectorAll('.species-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const speciesId = card.getAttribute('data-species-id');
+            const type = card.getAttribute('data-type');
+            showDetail(speciesId, type);
+        });
+    });
 }
 
 // Detail Modal
@@ -272,22 +281,22 @@ function showDetail(speciesId, type) {
 
     const detailImage = document.getElementById('detail-image');
     const imageUrl = `./assets/images/${species.id}.jpg`;
-
-    // Set image src directly
+    const detailBody = document.querySelector('.detail-body');
+    
+    // Reset previous state
+    detailImage.style.display = 'block';
+    detailBody.style.background = '';
+    detailBody.style.minHeight = '';
+    
+    // Set image src
     detailImage.src = imageUrl;
     detailImage.alt = getSpeciesName(species);
 
     // Handle image load error with fallback
     detailImage.onerror = () => {
-        // If image fails, hide it and show gradient background instead
         detailImage.style.display = 'none';
-        const detailBody = document.querySelector('.detail-body');
         detailBody.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)';
         detailBody.style.minHeight = '250px';
-    };
-
-    detailImage.onload = () => {
-        detailImage.style.display = 'block';
     };
 
     const nameElement = document.getElementById('detail-name');
@@ -297,9 +306,6 @@ function showDetail(speciesId, type) {
 
     document.getElementById('detail-modal').classList.add('active');
 }
-
-// Expose showDetail to global scope for onclick handlers
-window.showDetail = showDetail;
 
 function closeModal() {
     const detailImage = document.getElementById('detail-image');
