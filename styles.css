@@ -185,6 +185,32 @@ body {
     border-color: var(--primary-color);
 }
 
+/* Search */
+.search-container {
+    margin: 1rem 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: var(--surface-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.1);
+}
+
+.search-input::placeholder {
+    color: var(--text-light);
+}
+
 /* Species Grid */
 .species-grid {
     display: grid;

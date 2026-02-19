@@ -31,6 +31,8 @@ const i18n = {
         delete: 'Delete',
         no_sightings: 'No sightings yet. Start tracking!',
         confirm_delete: 'Are you sure?',
+        search_birds: 'Search birds...',
+        search_fish: 'Search fish...',
     },
     ru: {
         app_title: '🦅 🐟 Трекер',
@@ -59,6 +61,8 @@ const i18n = {
         delete: 'Удалить',
         no_sightings: 'Наблюдений нет. Начните отслеживание!',
         confirm_delete: 'Вы уверены?',
+        search_birds: 'Поиск птиц...',
+        search_fish: 'Поиск рыб...',
     }
 };
 
@@ -69,6 +73,7 @@ const speciesData = { birds, fish };
 let currentLanguage = 'en';
 let currentTab = 'birds';
 let currentCategory = 'all';
+let currentSearchQuery = { birds: '', fish: '' };
 let sightings = JSON.parse(localStorage.getItem('sightings')) || [];
 let selectedSpecies = null;
 
@@ -103,6 +108,14 @@ function applyLanguage() {
             } else {
                 el.textContent = i18n[currentLanguage][key];
             }
+        }
+    });
+    
+    // Handle placeholder attributes
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (i18n[currentLanguage][key]) {
+            el.placeholder = i18n[currentLanguage][key];
         }
     });
 }
@@ -164,6 +177,17 @@ function setupEventListeners() {
     
     bindCategoryButtons();
 
+    // Search inputs
+    document.getElementById('birds-search')?.addEventListener('input', (e) => {
+        currentSearchQuery.birds = e.target.value;
+        renderSpeciesGrid();
+    });
+
+    document.getElementById('fish-search')?.addEventListener('input', (e) => {
+        currentSearchQuery.fish = e.target.value;
+        renderSpeciesGrid();
+    });
+
     // Add sighting
     document.getElementById('add-sighting-btn').addEventListener('click', addSighting);
 
@@ -203,7 +227,7 @@ function setupEventListeners() {
 // Tab Management
 function switchTab(tab) {
     currentTab = tab;
-    
+
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.getAttribute('data-tab') === tab) {
@@ -216,8 +240,15 @@ function switchTab(tab) {
     });
     document.getElementById(`${tab}-tab`).classList.add('active');
 
-    // Reset category to 'all' when switching tabs
+    // Reset category and search when switching tabs
     currentCategory = 'all';
+    currentSearchQuery = { birds: '', fish: '' };
+    
+    // Clear search inputs
+    document.querySelectorAll('.search-input').forEach(input => {
+        input.value = '';
+    });
+    
     const parent = document.querySelector(`.tab-content.active .categories`);
     if (parent) {
         parent.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
@@ -242,6 +273,21 @@ function renderSpeciesGrid() {
     let filtered = species;
     if (currentCategory !== 'all') {
         filtered = species.filter(s => s.category === currentCategory);
+    }
+
+    // Filter by search query
+    const searchQuery = currentSearchQuery[type]?.toLowerCase() || '';
+    if (searchQuery) {
+        filtered = filtered.filter(s => {
+            const name = getSpeciesName(s).toLowerCase();
+            const latin = s.latin_name.toLowerCase();
+            const descEn = s.description_en.toLowerCase();
+            const descRu = s.description_ru.toLowerCase();
+            return name.includes(searchQuery) || 
+                   latin.includes(searchQuery) || 
+                   descEn.includes(searchQuery) || 
+                   descRu.includes(searchQuery);
+        });
     }
 
     // Sort alphabetically by species name in current language
