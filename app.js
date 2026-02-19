@@ -276,7 +276,7 @@ function showDetail(speciesId, type) {
     // Set image src directly
     detailImage.src = imageUrl;
     detailImage.alt = getSpeciesName(species);
-    
+
     // Handle image load error with fallback
     detailImage.onerror = () => {
         // If image fails, hide it and show gradient background instead
@@ -285,7 +285,7 @@ function showDetail(speciesId, type) {
         detailBody.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)';
         detailBody.style.minHeight = '250px';
     };
-    
+
     detailImage.onload = () => {
         detailImage.style.display = 'block';
     };
@@ -297,6 +297,9 @@ function showDetail(speciesId, type) {
 
     document.getElementById('detail-modal').classList.add('active');
 }
+
+// Expose showDetail to global scope for onclick handlers
+window.showDetail = showDetail;
 
 function closeModal() {
     const detailImage = document.getElementById('detail-image');
