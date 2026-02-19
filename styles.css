@@ -256,8 +256,8 @@ body {
     content: '🦅';
 }
 
-/* Hide emoji when image loads successfully */
-.species-image[style*="background-image"]::before {
+/* Hide emoji when image has a real background (not just gradient) */
+.species-image[style*="assets/images"]::before {
     content: '';
 }
 
