@@ -8,7 +8,7 @@ export const birds = [
         category: 'european',
         description_en: 'A large bird of prey with dark brown plumage and golden crown. Wingspan up to 2.3m. Found in mountains and open territories.',
         description_ru: 'Крупная хищная птица с тёмно-коричневым оперением и золотистой макушкой. Размах крыльев до 2,3м. Обитает в горах и открытых территориях.',
-        image: '🦅'
+        image: 'assets/images/golden-eagle.jpg'
     },
     {
         id: 'barn-owl',
@@ -18,7 +18,7 @@ export const birds = [
         category: 'european',
         description_en: 'Distinctive heart-shaped facial disc. Hunts small rodents at night. Common in agricultural areas across Europe.',
         description_ru: 'Отличается сердцевидным лицевым диском. Охотится на мелких грызунов ночью. Распространена в сельскохозяйственных районах Европы.',
-        image: '🦉'
+        image: 'assets/images/barn-owl.jpg'
     },
     {
         id: 'great-tit',
@@ -28,7 +28,7 @@ export const birds = [
         category: 'european',
         description_en: 'Small songbird with black and white head, white cheeks. Very common in forests and gardens. Excellent acrobatic abilities.',
         description_ru: 'Маленькая певчая птица с чёрной и белой головой, белыми щёками. Очень распространена в лесах и садах. Отличные акробатические способности.',
-        image: '🐦'
+        image: 'assets/images/great-tit.jpg'
     },
     {
         id: 'scarlet-macaw',
@@ -38,7 +38,7 @@ export const birds = [
         category: 'tropical',
         description_en: 'Brilliant red plumage with blue and yellow wings. One of the largest flying parrot species. Lives in tropical forests of Central and South America.',
         description_ru: 'Ослепительно красное оперение с голубыми и жёлтыми крыльями. Один из самых крупных видов летающих попугаев. Живёт в тропических лесах Центральной и Южной Америки.',
-        image: '🦜'
+        image: 'assets/images/scarlet-macaw.jpg'
     },
     {
         id: 'quetzal',
@@ -48,7 +48,7 @@ export const birds = [
         category: 'tropical',
         description_en: 'Legendary bird from Aztec mythology. Iridescent green plumage, long tail feathers in males. Sacred symbol of Central America.',
         description_ru: 'Легендарная птица из ацтекской мифологии. Переливающееся зелёное оперение, длинные хвостовые перья у самцов. Священный символ Центральной Америки.',
-        image: '✨'
+        image: 'assets/images/quetzal.jpg'
     },
     {
         id: 'paradise-bird',
@@ -58,7 +58,7 @@ export const birds = [
         category: 'tropical',
         description_en: 'Extraordinary colorful birds from rainforests of New Guinea. Males have elaborate plumage and complex courtship displays.',
         description_ru: 'Необычайно красочные птицы из тропических лесов Новой Гвинеи. Самцы имеют сложное оперение и сложные брачные ритуалы.',
-        image: '🌈'
+        image: 'assets/images/paradise-bird.jpg'
     },
     {
         id: 'hummingbird',
@@ -68,7 +68,7 @@ export const birds = [
         category: 'tropical',
         description_en: 'Tiny bird with iridescent throat feathers. Hovers while feeding on nectar. Wings beat up to 53 times per second.',
         description_ru: 'Крошечная птица с переливающимися перьями на горле. Зависает в воздухе, питаясь нектаром. Крылья машут до 53 раз в секунду.',
-        image: '🐦'
+        image: 'assets/images/hummingbird.jpg'
     },
     {
         id: 'flamingo',
@@ -78,7 +78,7 @@ export const birds = [
         category: 'mediterranean',
         description_en: 'Tall wading bird with pink plumage and curved beak. Filters food from water. Lives in large flocks near saltwater lagoons.',
         description_ru: 'Высокая болотная птица с розовым оперением и изогнутым клювом. Фильтрует пищу из воды. Живёт большими стаями у солёных лагун.',
-        image: '🦩'
+        image: 'assets/images/flamingo.jpg'
     },
     {
         id: 'pelican',
@@ -88,7 +88,7 @@ export const birds = [
         category: 'mediterranean',
         description_en: 'Large water bird with distinctive throat pouch. White plumage with black flight feathers. Excellent fish hunter.',
         description_ru: 'Крупная водная птица с характерным горловым мешком. Белое оперение с чёрными маховыми перьями. Отличный охотник на рыбу.',
-        image: '🦢'
+        image: 'assets/images/pelican.jpg'
     },
     {
         id: 'kingfisher',
@@ -98,7 +98,7 @@ export const birds = [
         category: 'european',
         description_en: 'Small bird with bright blue and orange plumage. Dives into water to catch fish. Perches on branches overhanging rivers.',
         description_ru: 'Маленькая птица с ярким сине-оранжевым оперением. Ныряет в воду за рыбой. Сидит на ветвях, нависающих над реками.',
-        image: '🐦'
+        image: 'assets/images/kingfisher.jpg'
     },
     {
         id: 'woodpecker',
@@ -108,7 +108,7 @@ export const birds = [
         category: 'european',
         description_en: 'Black and white woodpecker with red undertail. Drums on trees to find insects. Strong chisel-like beak for drilling.',
         description_ru: 'Чёрно-белый дятел с красным подхвостьем. Барабанит по деревьям, добывая насекомых. Сильный клюв-долото для сверления.',
-        image: '🪵'
+        image: 'assets/images/woodpecker.jpg'
     },
     {
         id: 'heron',
@@ -118,7 +118,7 @@ export const birds = [
         category: 'european',
         description_en: 'Tall wading bird with long legs and neck. Gray plumage with black crown. Stands motionless waiting for prey.',
         description_ru: 'Высокая болотная птица с длинными ногами и шеей. Серое оперение с чёрной макушкой. Стоит неподвижно, ожидая добычу.',
-        image: '🦢'
+        image: 'assets/images/heron.jpg'
     },
     {
         id: 'toucan',
@@ -128,7 +128,7 @@ export const birds = [
         category: 'tropical',
         description_en: 'Large colorful bill, orange with black tip. Black body with white throat. Largest member of toucan family.',
         description_ru: 'Большой разноцветный клюв, оранжевый с чёрным кончиком. Чёрное тело с белым горлом. Крупнейший представитель семейства тукановых.',
-        image: '🦜'
+        image: 'assets/images/toucan.jpg'
     },
     {
         id: 'penguin',
@@ -138,7 +138,7 @@ export const birds = [
         category: 'mediterranean',
         description_en: 'Largest penguin species. Black and white plumage with yellow-orange patches on neck. Dives deeper than any bird.',
         description_ru: 'Крупнейший вид пингвинов. Чёрно-белое оперение с жёлто-оранжевыми пятнами на шее. Ныряет глубже любой другой птицы.',
-        image: '🐧'
+        image: 'assets/images/penguin.jpg'
     },
     {
         id: 'swan',
@@ -148,7 +148,7 @@ export const birds = [
         category: 'european',
         description_en: 'Large waterfowl with long curved neck. Pure white plumage with orange beak. Forms lifelong pair bonds.',
         description_ru: 'Крупная водоплавающая птица с длинной изогнутой шеей. Чисто-белое оперение с оранжевым клювом. Образует пожизненные пары.',
-        image: '🦢'
+        image: 'assets/images/swan.jpg'
     },
     {
         id: 'hawk',
@@ -158,6 +158,6 @@ export const birds = [
         category: 'european',
         description_en: 'Medium-large bird of prey. Gray-brown plumage with red eyes. Agile forest hunter pursuing prey through trees.',
         description_ru: 'Средне-крупная хищная птица. Серо-коричневое оперение с красными глазами. Ловкий лесной охотник, преследующий добычу среди деревьев.',
-        image: '🦅'
+        image: 'assets/images/hawk.jpg'
     }
 ];

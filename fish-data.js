@@ -8,7 +8,7 @@ export const fish = [
         category: 'river',
         description_en: 'Large freshwater predator with long body. Green-gray coloring. Excellent hunter found in rivers, lakes, and ponds.',
         description_ru: 'Крупный пресноводный хищник с удлиненным телом. Зелено-серая окраска. Отличный охотник, встречается в реках, озёрах и прудах.',
-        image: '🐠'
+        image: 'assets/images/pike.jpg'
     },
     {
         id: 'carp',
@@ -18,7 +18,7 @@ export const fish = [
         category: 'river',
         description_en: 'Large cyprinid fish. Gold or silver colored. Slow-moving, bottom-feeding fish. Common in European rivers and lakes.',
         description_ru: 'Крупная рыба семейства карповых. Золотистого или серебристого цвета. Медленно движущаяся донная рыба. Распространена в европейских реках и озёрах.',
-        image: '🐟'
+        image: 'assets/images/carp.jpg'
     },
     {
         id: 'trout',
@@ -28,7 +28,7 @@ export const fish = [
         category: 'river',
         description_en: 'Colorful river fish with characteristic red stripe along the body. Prefers cold, clean water with high oxygen content.',
         description_ru: 'Красочная речная рыба с характерной красной полосой вдоль тела. Предпочитает холодную, чистую воду с высоким содержанием кислорода.',
-        image: '🌈'
+        image: 'assets/images/trout.jpg'
     },
     {
         id: 'sea-bream',
@@ -38,7 +38,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Silvery fish with blue-gray back. Common in Mediterranean and Atlantic waters. Important food fish.',
         description_ru: 'Серебристая рыба с голубовато-серой спиной. Распространена в Средиземноморском и Атлантическом морях. Важная промысловая рыба.',
-        image: '🐟'
+        image: 'assets/images/sea-bream.jpg'
     },
     {
         id: 'grouper',
@@ -48,7 +48,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Large predatory fish. Brown-reddish coloring. Lives among rocky underwater formations. Slow-growing but long-lived.',
         description_ru: 'Крупная хищная рыба. Коричнево-красная окраска. Живет среди скалистых подводных образований. Медленно растущая, но долгоживущая.',
-        image: '🐢'
+        image: 'assets/images/grouper.jpg'
     },
     {
         id: 'clownfish',
@@ -58,7 +58,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Bright orange and white striped fish. Lives in symbiosis with sea anemones. Famous from the movie Finding Nemo.',
         description_ru: 'Ярко-оранжевая рыба с белыми полосами. Живет в симбиозе с морскими анемонами. Известна из фильма "В поисках Немо".',
-        image: '🐠'
+        image: 'assets/images/clownfish.jpg'
     },
     {
         id: 'blue-tang',
@@ -68,7 +68,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Bright blue reef fish. Herbivorous, feeding on algae. Found in coral reefs of the Indo-Pacific region.',
         description_ru: 'Ярко-голубая коралловая рыба. Травоядная, питается водорослями. Встречается в коралловых рифах Индо-Тихоокеанского региона.',
-        image: '🐟'
+        image: 'assets/images/blue-tang.jpg'
     },
     {
         id: 'lionfish',
@@ -78,7 +78,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Venomous fish with elaborate fins that resemble a lion\'s mane. Beautiful but dangerous predator of the coral reef.',
         description_ru: 'Ядовитая рыба с перепончатыми плавниками, напоминающими львиную гриву. Красивый, но опасный хищник коралловых рифов.',
-        image: '👑'
+        image: 'assets/images/lionfish.jpg'
     },
     {
         id: 'salmon',
@@ -88,7 +88,7 @@ export const fish = [
         category: 'river',
         description_en: 'Anadromous fish that migrates from ocean to rivers to spawn. Silvery body with black spots. Highly valued food fish.',
         description_ru: 'Проходная рыба, мигрирующая из океана в реки для нереста. Серебристое тело с чёрными пятнами. Ценная промысловая рыба.',
-        image: '🐟'
+        image: 'assets/images/salmon.jpg'
     },
     {
         id: 'catfish',
@@ -98,7 +98,7 @@ export const fish = [
         category: 'river',
         description_en: 'Large freshwater fish with long whiskers. Dark gray or brown coloring. Can grow up to 3 meters. Bottom-dwelling predator.',
         description_ru: 'Крупная пресноводная рыба с длинными усами. Тёмно-серая или коричневая окраска. Может достигать 3 метров. Донный хищник.',
-        image: '🐠'
+        image: 'assets/images/catfish.jpg'
     },
     {
         id: 'perch',
@@ -108,7 +108,7 @@ export const fish = [
         category: 'river',
         description_en: 'Green body with dark vertical stripes. Sharp spines on dorsal fin. Common predator in European freshwater bodies.',
         description_ru: 'Зелёное тело с тёмными вертикальными полосами. Острые шипы на спинном плавнике. Распространённый хищник в пресных водоёмах Европы.',
-        image: '🐟'
+        image: 'assets/images/perch.jpg'
     },
     {
         id: 'mackerel',
@@ -118,7 +118,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Streamlined fish with blue-green back and wavy dark stripes. Fast swimmer. Important commercial food fish.',
         description_ru: 'Стройная рыба с сине-зелёной спиной и волнистыми тёмными полосами. Быстрый пловец. Важная промысловая рыба.',
-        image: '🐠'
+        image: 'assets/images/mackerel.jpg'
     },
     {
         id: 'swordfish',
@@ -128,7 +128,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Large predatory fish with distinctive long flat bill. Dark gray above, silver below. Can reach speeds of 97 km/h.',
         description_ru: 'Крупная хищная рыба с характерным длинным плоским мечом. Тёмно-серая сверху, серебристая снизу. Может достигать скорости 97 км/ч.',
-        image: '⚔️'
+        image: 'assets/images/swordfish.jpg'
     },
     {
         id: 'moray-eel',
@@ -138,7 +138,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Large eel with mottled brown and yellow skin. Sharp teeth, powerful jaws. Hides in coral reef crevices.',
         description_ru: 'Крупный угорь с пёстрой коричнево-жёлтой кожей. Острые зубы, мощные челюсти. Прячется в расщелинах коралловых рифов.',
-        image: '🐍'
+        image: 'assets/images/moray-eel.jpg'
     },
     {
         id: 'angelfish',
@@ -148,7 +148,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Triangular body shape with long flowing fins. Silver with vertical black stripes. Popular aquarium fish from Amazon basin.',
         description_ru: 'Треугольная форма тела с длинными плавниками. Серебристая с вертикальными чёрными полосами. Популярная аквариумная рыба из бассейна Амазонки.',
-        image: '👼'
+        image: 'assets/images/angelfish.jpg'
     },
     {
         id: 'barracuda',
@@ -158,7 +158,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Elongated silver fish with prominent jaw and sharp teeth. Fierce predator. Can grow up to 2 meters long.',
         description_ru: 'Удлинённая серебристая рыба с выступающей челюстью и острыми зубами. Свирепый хищник. Может достигать 2 метров в длину.',
-        image: '🦈'
+        image: 'assets/images/barracuda.jpg'
     },
     {
         id: 'stingray',
@@ -168,7 +168,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Flat body with distinctive blue spots on yellow-brown background. Venomous spine on tail. Glides along ocean floor.',
         description_ru: 'Плоское тело с характерными голубыми пятнами на жёлто-коричневом фоне. Ядовитый шип на хвосте. Скользит по дну океана.',
-        image: '🔵'
+        image: 'assets/images/stingray.jpg'
     },
     {
         id: 'seahorse',
@@ -178,7 +178,7 @@ export const fish = [
         category: 'tropical',
         description_en: 'Unique upright swimming posture. Horse-like head, prehensile tail. Males carry eggs in brood pouch.',
         description_ru: 'Уникальная вертикальная поза при плавании. Голова как у лошади, цепкий хвост. Самцы вынашивают икру в выводковой сумке.',
-        image: '🐴'
+        image: 'assets/images/seahorse.jpg'
     },
     {
         id: 'octopus',
@@ -188,7 +188,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Highly intelligent cephalopod with eight arms. Can change color and texture. Master of camouflage and escape.',
         description_ru: 'Высокоразумный головоногий моллюск с восемью щупальцами. Может менять цвет и текстуру. Мастер маскировки и побега.',
-        image: '🐙'
+        image: 'assets/images/octopus.jpg'
     },
     {
         id: 'cuttlefish',
@@ -198,7 +198,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Cephalopod with internal shell called cuttlebone. Rapidly changes skin color for communication and camouflage.',
         description_ru: 'Головоногий моллюск с внутренней раковиной. Быстро меняет цвет кожи для общения и маскировки.',
-        image: '🦑'
+        image: 'assets/images/cuttlefish.jpg'
     },
     {
         id: 'red-mullet',
@@ -208,7 +208,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Small reddish fish with distinctive barbels under chin. Prized delicacy in Mediterranean cuisine.',
         description_ru: 'Маленькая красноватая рыба с характерными усиками под подбородком. Ценимый деликатес средиземноморской кухни.',
-        image: '🐟'
+        image: 'assets/images/red-mullet.jpg'
     },
     {
         id: 'anchovy',
@@ -218,7 +218,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Small schooling fish with silvery body. Important commercial species. Often preserved in salt or oil.',
         description_ru: 'Маленькая стайная рыба с серебристым телом. Важный промысловый вид. Часто консервируется в соли или масле.',
-        image: '🐠'
+        image: 'assets/images/anchovy.jpg'
     },
     {
         id: 'sardine',
@@ -228,7 +228,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Small oily fish that travels in large schools. Silver body with blue-green back. Rich in omega-3 fatty acids.',
         description_ru: 'Маленькая жирная рыба, путешествующая большими стаями. Серебристое тело с сине-зелёной спиной. Богата омега-3 жирными кислотами.',
-        image: '🐟'
+        image: 'assets/images/sardine.jpg'
     },
     {
         id: 'turbot',
@@ -238,7 +238,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Large flatfish with diamond-shaped body. Both eyes on left side. Highly prized food fish.',
         description_ru: 'Крупная камболообразная рыба с ромбовидным телом. Оба глаза на левой стороне. Ценная промысловая рыба.',
-        image: '🐠'
+        image: 'assets/images/turbot.jpg'
     },
     {
         id: 'monkfish',
@@ -248,7 +248,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Bottom-dwelling fish with large mouth and lure on head. Ambush predator. White firm flesh prized by chefs.',
         description_ru: 'Донная рыба с большим ртом и приманкой на голове. Хищник-засадчик. Белое плотное мясо ценится шеф-поварами.',
-        image: '🎣'
+        image: 'assets/images/monkfish.jpg'
     },
     {
         id: 'wreckfish',
@@ -258,7 +258,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Large deep-water fish with robust body. Gray-brown coloring. Lives near rocky outcrops and shipwrecks.',
         description_ru: 'Крупная глубоководная рыба с крепким телом. Серо-коричневая окраска. Живёт у скалистых выступов и затонувших судов.',
-        image: '🐟'
+        image: 'assets/images/wreckfish.jpg'
     },
     {
         id: 'amberjack',
@@ -268,7 +268,7 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Large powerful fish with streamlined body. Silver with bronze stripe. Popular game fish and seafood.',
         description_ru: 'Крупная мощная рыба с обтекаемым телом. Серебристая с бронзовой полосой. Популярная спортивная рыба и морепродукт.',
-        image: '🐠'
+        image: 'assets/images/amberjack.jpg'
     },
     {
         id: 'triggerfish',
@@ -278,6 +278,6 @@ export const fish = [
         category: 'mediterranean',
         description_en: 'Distinctive oval body with trigger-like dorsal spine. Omnivorous, feeding on shellfish and crustaceans.',
         description_ru: 'Характерное овальное тело с спусковым шипом на спинном плавнике. Всеядная, питается моллюсками и ракообразными.',
-        image: '🐟'
+        image: 'assets/images/triggerfish.jpg'
     }
 ];
