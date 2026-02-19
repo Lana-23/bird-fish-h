@@ -272,24 +272,24 @@ function showDetail(speciesId, type) {
 
     const detailImage = document.getElementById('detail-image');
     const imageUrl = `./assets/images/${species.id}.jpg`;
+
+    // Set image src directly
+    detailImage.src = imageUrl;
+    detailImage.alt = getSpeciesName(species);
     
-    // Load image with fallback to gradient background
-    const img = new Image();
-    img.onload = () => {
-        detailImage.style.backgroundImage = `url('${imageUrl}')`;
-        detailImage.textContent = '';
+    // Handle image load error with fallback
+    detailImage.onerror = () => {
+        // If image fails, hide it and show gradient background instead
+        detailImage.style.display = 'none';
+        const detailBody = document.querySelector('.detail-body');
+        detailBody.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)';
+        detailBody.style.minHeight = '250px';
     };
-    img.onerror = () => {
-        detailImage.style.backgroundImage = `linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%)`;
-        detailImage.textContent = '';
+    
+    detailImage.onload = () => {
+        detailImage.style.display = 'block';
     };
-    img.src = imageUrl;
-    
-    if (img.complete && img.naturalHeight !== 0) {
-        detailImage.style.backgroundImage = `url('${imageUrl}')`;
-        detailImage.textContent = '';
-    }
-    
+
     const nameElement = document.getElementById('detail-name');
     nameElement.innerHTML = `${getSpeciesName(species)}<br><span class="detail-latin">${species.latin_name}</span>`;
     document.getElementById('detail-category').textContent = `${t(type)}: ${t(species.category)}`;
@@ -299,6 +299,15 @@ function showDetail(speciesId, type) {
 }
 
 function closeModal() {
+    const detailImage = document.getElementById('detail-image');
+    const detailBody = document.querySelector('.detail-body');
+    
+    // Reset styles
+    detailImage.style.display = 'block';
+    detailImage.src = '';
+    detailBody.style.background = '';
+    detailBody.style.minHeight = '';
+    
     document.getElementById('detail-modal').classList.remove('active');
 }
 
