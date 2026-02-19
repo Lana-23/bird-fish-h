@@ -256,6 +256,11 @@ body {
     content: '🦅';
 }
 
+/* Hide emoji when image loads successfully */
+.species-image[style*="background-image"]::before {
+    content: '';
+}
+
 .species-info {
     padding: 0.75rem;
     flex: 1;
