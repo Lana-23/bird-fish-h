@@ -12,6 +12,11 @@
         <div class="nav-content">
             <h1 class="logo" data-i18n="app_title">🦅 🐟 Tracker</h1>
             <div class="nav-controls">
+                <div class="user-section" id="user-section">
+                    <button class="btn-login" id="login-btn" data-i18n="login">Login</button>
+                    <span class="user-email" id="user-email" style="display: none;"></span>
+                    <button class="btn-logout" id="logout-btn" style="display: none;" data-i18n="logout">Logout</button>
+                </div>
                 <select id="language-select" class="language-select">
                     <option value="en">English</option>
                     <option value="ru">Русский</option>
@@ -20,6 +25,25 @@
             </div>
         </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content login-modal-content">
+            <button class="modal-close" id="login-modal-close">&times;</button>
+            <div class="login-body">
+                <h2 data-i18n="login_title">Login to Save Your Sightings</h2>
+                <p class="login-description" data-i18n="login_description">Enter your email to save sightings to the cloud. Without login, data is saved only in this browser.</p>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email" data-i18n="email_label">Email:</label>
+                        <input type="email" id="login-email" required placeholder="your@email.com">
+                    </div>
+                    <button type="submit" class="btn-primary" data-i18n="login_button">Login</button>
+                </form>
+                <p class="login-note" data-i18n="login_note">No password required. We'll send you a magic link (not implemented yet).</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Container -->
     <div class="container">
@@ -33,6 +57,10 @@
 
         <!-- Birds Tab -->
         <section id="birds-tab" class="tab-content active">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="category" data-i18n="by_category">By Category</button>
+                <button class="view-btn" data-view="family" data-i18n="by_family">By Family</button>
+            </div>
             <div class="categories">
                 <button class="category-btn active" data-category="all" data-i18n="all_birds">All Birds</button>
                 <button class="category-btn" data-category="european" data-i18n="european">European</button>
@@ -42,10 +70,15 @@
                 <input type="text" class="search-input" id="birds-search" placeholder="Search birds..." data-i18n-placeholder="search_birds">
             </div>
             <div class="species-grid" id="birds-grid"></div>
+            <div class="families-container" id="birds-families" style="display: none;"></div>
         </section>
 
         <!-- Fish Tab -->
         <section id="fish-tab" class="tab-content">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="category" data-i18n="by_category">By Category</button>
+                <button class="view-btn" data-view="family" data-i18n="by_family">By Family</button>
+            </div>
             <div class="categories">
                 <button class="category-btn active" data-category="all" data-i18n="all_fish">All Fish</button>
                 <button class="category-btn" data-category="river" data-i18n="river">River</button>
@@ -56,6 +89,7 @@
                 <input type="text" class="search-input" id="fish-search" placeholder="Search fish..." data-i18n-placeholder="search_fish">
             </div>
             <div class="species-grid" id="fish-grid"></div>
+            <div class="families-container" id="fish-families" style="display: none;"></div>
         </section>
 
         <!-- Sightings Tab -->
@@ -92,6 +126,16 @@
         <!-- Statistics Tab -->
         <section id="stats-tab" class="tab-content">
             <div class="stats-container">
+                <div class="data-management">
+                    <h3 data-i18n="data_management">Data Management</h3>
+                    <div class="data-buttons">
+                        <button class="btn-secondary" id="export-btn" data-i18n="export_data">Export Data</button>
+                        <button class="btn-secondary" id="import-btn" data-i18n="import_data">Import Data</button>
+                        <input type="file" id="import-file" accept=".json" style="display: none;">
+                    </div>
+                    <p class="data-note" data-i18n="data_note">Your sightings are automatically saved to browser storage (IndexedDB) and persist through cache clears.</p>
+                </div>
+            
                 <div class="stats-summary">
                     <div class="stat-card">
                         <div class="stat-value" id="total-sightings">0</div>
@@ -134,6 +178,6 @@
         </div>
     </div>
 
-    <script type="module" src="app.js?v=3"></script>
+    <script type="module" src="app.js?v=15"></script>
 </body>
 </html>
