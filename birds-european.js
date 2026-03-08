@@ -58,6 +58,101 @@ export const europeanBirds = [
         }
     },
     {
+        id: 'blue-tit',
+        name_en: 'Eurasian Blue Tit',
+        name_ru: 'Лазоревка',
+        latin_name: 'Cyanistes caeruleus',
+        family: 'Paridae',
+        family_ru: 'Синицевые',
+        category: 'european',
+        description_en: 'Small colorful tit with blue cap, white face, and yellow underparts. Very active and acrobatic. Common in gardens and woodlands.',
+        description_ru: 'Маленькая яркая синица с синей шапочкой, белым лицом и жёлтым низом. Очень активная и акробатичная. Обычна в садах и лесах.',
+        characteristics: {
+            size: 'small (10-12 cm)',
+            wingspan: '17-21 cm',
+            color: ['blue', 'yellow', 'white', 'green'],
+            features: ['blue cap', 'white face with dark eye stripe', 'yellow belly', 'green back'],
+            habitat: ['deciduous forests', 'gardens', 'parks', 'orchards'],
+            behavior: ['acrobatic', 'insect hunting', 'seed eating', 'cavity nesting']
+        }
+    },
+    {
+        id: 'coal-tit',
+        name_en: 'Coal Tit',
+        name_ru: 'Московка',
+        latin_name: 'Periparus ater',
+        family: 'Paridae',
+        family_ru: 'Синицевые',
+        category: 'european',
+        description_en: 'Small tit with black head, white nape, and buff underparts. Conifer forest specialist. Often hangs upside down while feeding.',
+        description_ru: 'Маленькая синица с чёрной головой, белым затылком и палевым низом. Специалист хвойных лесов. Часто кормится вниз головой.',
+        characteristics: {
+            size: 'small (10-11 cm)',
+            wingspan: '16-18 cm',
+            color: ['black', 'white', 'buff', 'grey'],
+            features: ['black head', 'white nape patch', 'pale buff underparts'],
+            habitat: ['coniferous forests', 'pine woods', 'spruce forests', 'gardens'],
+            behavior: ['acrobatic', 'cone feeding', 'food caching', 'resident']
+        }
+    },
+    {
+        id: 'crested-tit',
+        name_en: 'Crested Tit',
+        name_ru: 'Хохлатая синица',
+        latin_name: 'Lophophanes cristatus',
+        family: 'Paridae',
+        family_ru: 'Синицевые',
+        category: 'european',
+        description_en: 'Distinctive tit with pointed black crest, grey body, and buff flanks. Coniferous forest specialist with nasal call.',
+        description_ru: 'Заметная синица с заострённым чёрным хохолком, серым телом и палевыми боками. Специалист хвойных лесов с носовым голосом.',
+        characteristics: {
+            size: 'small (11-12 cm)',
+            wingspan: '17-20 cm',
+            color: ['grey', 'black', 'white', 'buff'],
+            features: ['pointed black crest', 'black bib', 'grey back', 'buff flanks'],
+            habitat: ['coniferous forests', 'pine woods', 'spruce forests', 'mixed woods'],
+            behavior: ['acrobatic', 'insect hunting', 'seed eating', 'resident']
+        }
+    },
+    {
+        id: 'marsh-tit',
+        name_en: 'Marsh Tit',
+        name_ru: 'Пухляк',
+        latin_name: 'Poecile palustris',
+        family: 'Paridae',
+        family_ru: 'Синицевые',
+        category: 'european',
+        description_en: 'Small tit with black cap and bib, dull cheeks. Very similar to willow tit but with glossier cap. Deciduous woodland specialist.',
+        description_ru: 'Маленькая синица с чёрной шапочкой и подбородком, тусклыми щеками. Очень похожа на буроголовую гаичку, но с более блестящей шапочкой. Специалист лиственных лесов.',
+        characteristics: {
+            size: 'small (11-12 cm)',
+            wingspan: '17-20 cm',
+            color: ['black', 'white', 'buff', 'grey'],
+            features: ['glossy black cap', 'black bib', 'pale cheeks', 'no wing bar'],
+            habitat: ['deciduous forests', 'oak woods', 'gardens', 'parklands'],
+            behavior: ['food caching', 'insect hunting', 'seed eating', 'resident']
+        }
+    },
+    {
+        id: 'willow-tit',
+        name_en: 'Willow Tit',
+        name_ru: 'Буроголовая гаичка',
+        latin_name: 'Poecile montanus',
+        family: 'Paridae',
+        family_ru: 'Синицевые',
+        category: 'european',
+        description_en: 'Small tit with diffuse black cap border, larger white cheek patch. Coniferous and mixed forest specialist. Hoards food.',
+        description_ru: 'Маленькая синица с размытой границей чёрной шапочки, более крупным белым пятном на щеке. Специалист хвойных и смешанных лесов. Делает запасы корма.',
+        characteristics: {
+            size: 'small (11-12 cm)',
+            wingspan: '17-20 cm',
+            color: ['black', 'white', 'buff', 'brown'],
+            features: ['dull black cap', 'large white cheek', 'buff flanks', 'wing bar'],
+            habitat: ['coniferous forests', 'mixed woods', 'birch stands', 'marshy areas'],
+            behavior: ['food caching', 'insect hunting', 'seed eating', 'resident']
+        }
+    },
+    {
         id: 'kingfisher',
         name_en: 'Common Kingfisher',
         name_ru: 'Зимородок обыкновенный',
@@ -3527,7 +3622,7 @@ export const europeanBirds = [
         family_ru: 'Фазановые',
         category: 'european',
         description_en: 'Largest grouse with dark male having fan tail and red eye comb. Large brown female. Forest specialist.',
-        description_ru: 'Крупнейший тетерев с тёмным самцом с веерообразным хвостом и красной бровью. Крупная коричневая самка. Лесной специалист.',
+        description_ru: 'Крупнейший тетерев с тё��ным самцом с веерообразным хвостом и красной бровью. Крупная коричневая самка. Лесной специалист.',
         characteristics: {
             size: 'very large (54-90 cm)',
             wingspan: '87-125 cm',
