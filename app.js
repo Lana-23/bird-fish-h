@@ -809,9 +809,13 @@ function renderFamilyView(container, species, type) {
         }
         families[familyName].items.push(item);
     });
-    
-    // Sort families by number of items (descending)
-    const sortedFamilies = Object.values(families).sort((a, b) => b.items.length - a.items.length);
+
+    // Sort families alphabetically by name
+    const sortedFamilies = Object.values(families).sort((a, b) => {
+        const nameA = currentLanguage === 'ru' ? a.name_ru : a.name;
+        const nameB = currentLanguage === 'ru' ? b.name_ru : b.name;
+        return nameA.localeCompare(nameB, currentLanguage === 'ru' ? 'ru-RU' : 'en-US');
+    });
     
     // Render families
     container.innerHTML = sortedFamilies.map(family => {
