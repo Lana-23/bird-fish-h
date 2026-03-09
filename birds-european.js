@@ -592,6 +592,44 @@ export const europeanBirds = [
         }
     },
     {
+        id: 'gray-headed-bullfinch',
+        name_en: 'Gray-headed Bullfinch',
+        name_ru: 'Буроголовый снегирь',
+        latin_name: 'Pyrrhula erythaca',
+        family: 'Fringillidae',
+        family_ru: 'Вьюрковые',
+        category: 'european',
+        description_en: 'Large bullfinch with gray head and back. Pink-red breast in males, buff-brown in females. Mountain forest specialist.',
+        description_ru: 'Крупный снегирь с серой головой и спиной. Розово-красная грудь у самцов, буровато-палевая у самок. Специалист горных лесов.',
+        characteristics: {
+            size: 'medium (16-18 cm)',
+            wingspan: '26-30 cm',
+            color: ['gray', 'pink-red', 'black', 'white', 'buff'],
+            features: ['gray head', 'pink breast (male)', 'black cap', 'white wing bar'],
+            habitat: ['mountain forests', 'coniferous woods', 'alpine zones', 'bamboo thickets'],
+            behavior: ['quiet', 'seed eating', 'bud eating', 'pairs or small groups']
+        }
+    },
+    {
+        id: 'azores-bullfinch',
+        name_en: 'Azores Bullfinch',
+        name_ru: 'Азорский снегирь',
+        latin_name: 'Pyrrhula murina',
+        family: 'Fringillidae',
+        family_ru: 'Вьюрковые',
+        category: 'european',
+        description_en: 'Rare endemic bullfinch of Azores. Black head and wings with pink-red breast in males. Critically endangered species.',
+        description_ru: 'Редкий эндемичный снегирь Азорских островов. Чёрная голова и крылья с розово-красной грудью у самцов. Критически угрожаемый вид.',
+        characteristics: {
+            size: 'medium (16-17 cm)',
+            wingspan: '24-27 cm',
+            color: ['black', 'pink-red', 'gray', 'white'],
+            features: ['black head', 'pink breast (male)', 'gray back', 'white wing bar'],
+            habitat: ['laurel forests', 'mountain slopes', 'Azores islands', 'native vegetation'],
+            behavior: ['quiet', 'seed eating', 'fruit eating', 'endemic']
+        }
+    },
+    {
         id: 'crossbill',
         name_en: 'Red Crossbill',
         name_ru: 'Клёст-еловик',
@@ -1134,7 +1172,7 @@ export const europeanBirds = [
         name_ru: 'Ремез',
         latin_name: 'Remiz pendulinus',
         family: 'Remizidae',
-        family_ru: 'Ремезовые',
+        family_ru: '��емезовые',
         category: 'european',
         description_en: 'Small grey-brown tit with black mask. Builds elaborate hanging nest from plant down. Reed bed specialist.',
         description_ru: 'Маленькая серо-коричневая синица с чёрной маской. Строит сложное висячее гнездо из пуха растений. Специалист тростниковых зарослей.',
@@ -3982,7 +4020,7 @@ export const europeanBirds = [
         id: 'leach-petrel',
         name_en: "Leach's Storm Petrel",
         name_ru: 'Качурка Лича',
-        latin_name: 'Hydrobates leucorhous',
+        latin_name: '',
         family: 'Hydrobatidae',
         family_ru: 'Качурковые',
         category: 'european',
