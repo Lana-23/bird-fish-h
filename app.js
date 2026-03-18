@@ -24,6 +24,158 @@ const speciesImagePaths = {
     'flamingo': 'birds-tropical/flamingo.jpg',
     'pelican': 'birds-tropical/pelican.jpg',
     'penguin': 'birds-tropical/penguin.jpg',
+    // Tropical birds - Macaws
+    'blue-macaw': 'birds-tropical/blue-macaw.jpg',
+    'green-macaw': 'birds-tropical/green-macaw.jpg',
+    'military-macaw': 'birds-tropical/military-macaw.jpg',
+    'chestnut-macaw': 'birds-tropical/chestnut-macaw.jpg',
+    // Tropical birds - Amazons
+    'blue-fronted-amazon': 'birds-tropical/blue-fronted-amazon.jpg',
+    'yellow-crowned-amazon': 'birds-tropical/yellow-crowned-amazon.jpg',
+    'mealy-amazon': 'birds-tropical/mealy-amazon.jpg',
+    'lilac-crowned-amazon': 'birds-tropical/lilac-crowned-amazon.jpg',
+    'red-lored-amazon': 'birds-tropical/red-lored-amazon.jpg',
+    'white-fronted-amazon': 'birds-tropical/white-fronted-amazon.jpg',
+    'orange-winged-amazon': 'birds-tropical/orange-winged-amazon.jpg',
+    // Tropical birds - Cockatoos
+    'cockatoo-umbrella': 'birds-tropical/cockatoo-umbrella.jpg',
+    'cockatoo-sulphur': 'birds-tropical/cockatoo-sulphur.jpg',
+    'cockatoo-palm': 'birds-tropical/cockatoo-palm.jpg',
+    'cockatoo-galah': 'birds-tropical/cockatoo-galah.jpg',
+    'cockatoo-gang-gang': 'birds-tropical/cockatoo-gang-gang.jpg',
+    // Tropical birds - Lorikeets
+    'lori-rainbow': 'birds-tropical/lori-rainbow.jpg',
+    'lori-scaly': 'birds-tropical/lori-scaly.jpg',
+    // Tropical birds - Small Parrots
+    'budgerigar': 'birds-tropical/budgerigar.jpg',
+    'cockatiel': 'birds-tropical/cockatiel.jpg',
+    'lovebird-fischer': 'birds-tropical/lovebird-fischer.jpg',
+    'lovebird-masked': 'birds-tropical/lovebird-masked.jpg',
+    'lovebird-peach': 'birds-tropical/lovebird-peach.jpg',
+    // Tropical birds - Conures
+    'conure-sun': 'birds-tropical/conure-sun.jpg',
+    'conure-green': 'birds-tropical/conure-green.jpg',
+    'conure-blue': 'birds-tropical/conure-blue.jpg',
+    'conure-jenday': 'birds-tropical/conure-jenday.jpg',
+    'conure-nanday': 'birds-tropical/conure-nanday.jpg',
+    // Tropical birds - Pionus
+    'pionus-blue': 'birds-tropical/pionus-blue.jpg',
+    'pionus-maximilian': 'birds-tropical/pionus-maximilian.jpg',
+    'pionus-white': 'birds-tropical/pionus-white.jpg',
+    // Tropical birds - Caiques
+    'caique-black': 'birds-tropical/caique-black.jpg',
+    'caique-white': 'birds-tropical/caique-white.jpg',
+    // Tropical birds - Poicephalus
+    'poicephalus-senegal': 'birds-tropical/poicephalus-senegal.jpg',
+    'poicephalus-meyer': 'birds-tropical/poicephalus-meyer.jpg',
+    'poicephalus-jardine': 'birds-tropical/poicephalus-jardine.jpg',
+    // Tropical birds - Other Parrots
+    'eclectus': 'birds-tropical/eclectus.jpg',
+    'hanging-parrot': 'birds-tropical/hanging-parrot.jpg',
+    'fig-parrot': 'birds-tropical/fig-parrot.jpg',
+    // Tropical birds - Broadbills & Pittas
+    'broadbill': 'birds-tropical/broadbill.jpg',
+    'pitta-banded': 'birds-tropical/pitta-banded.jpg',
+    'pitta-fairy': 'birds-tropical/pitta-fairy.jpg',
+    'broadbill-scarlet': 'birds-tropical/broadbill-scarlet.jpg',
+    // Tropical birds - Trogons
+    'trogon-red': 'birds-tropical/trogon-red.jpg',
+    'trogon-orange': 'birds-tropical/trogon-orange.jpg',
+    'trogon-ward': 'birds-tropical/trogon-ward.jpg',
+    // Tropical birds - Kingfishers
+    'kingfisher-common': 'birds-tropical/kingfisher-common.jpg',
+    'kingfisher-belted': 'birds-tropical/kingfisher-belted.jpg',
+    'kingfisher-collared': 'birds-tropical/kingfisher-collared.jpg',
+    'kingfisher-pied': 'birds-tropical/kingfisher-pied.jpg',
+    // Tropical birds - Bee-eaters
+    'bee-eater-blue': 'birds-tropical/bee-eater-blue.jpg',
+    'bee-eater-rainbow': 'birds-tropical/bee-eater-rainbow.jpg',
+    'bee-eater-white': 'birds-tropical/bee-eater-white.jpg',
+    // Tropical birds - Rollers
+    'roller-broad': 'birds-tropical/roller-broad.jpg',
+    'roller-indian': 'birds-tropical/roller-indian.jpg',
+    // Tropical birds - Hornbills
+    'hornbill-great': 'birds-tropical/hornbill-great.jpg',
+    'hornbill-rhinoceros': 'birds-tropical/hornbill-rhinoceros.jpg',
+    'hornbill-wrinkled': 'birds-tropical/hornbill-wrinkled.jpg',
+    'hornbill-oriental': 'birds-tropical/hornbill-oriental.jpg',
+    // Tropical birds - Barbets
+    'barbet-coppersmith': 'birds-tropical/barbet-coppersmith.jpg',
+    'barbet-blue': 'birds-tropical/barbet-blue.jpg',
+    'barbet-golden': 'birds-tropical/barbet-golden.jpg',
+    'barbet-red': 'birds-tropical/barbet-red.jpg',
+    // Tropical birds - Jacanas
+    'jacana-comb': 'birds-tropical/jacana-comb.jpg',
+    'jacana-pheasant': 'birds-tropical/jacana-pheasant.jpg',
+    'jacana-bronze': 'birds-tropical/jacana-bronze.jpg',
+    // Tropical birds - Ibises
+    'ibis-glossy': 'birds-tropical/ibis-glossy.jpg',
+    'ibis-hadada': 'birds-tropical/ibis-hadada.jpg',
+    // Tropical birds - Spoonbills
+    'spoonbill-royal': 'birds-tropical/spoonbill-royal.jpg',
+    'spoonbill-african': 'birds-tropical/spoonbill-african.jpg',
+    // Tropical birds - Storks
+    'stork-adjutant': 'birds-tropical/stork-adjutant.jpg',
+    'stork-painted': 'birds-tropical/stork-painted.jpg',
+    'stork-woolly': 'birds-tropical/stork-woolly.jpg',
+    // Tropical birds - Herons
+    'heron-goliath': 'birds-tropical/heron-goliath.jpg',
+    'heron-purple': 'birds-tropical/heron-purple.jpg',
+    'heron-black': 'birds-tropical/heron-black.jpg',
+    // Tropical birds - Egrets
+    'egret-cattle': 'birds-tropical/egret-cattle.jpg',
+    'egret-intermediate': 'birds-tropical/egret-intermediate.jpg',
+    // Tropical birds - Bitterns
+    'bittern-yellow': 'birds-tropical/bittern-yellow.jpg',
+    'bittern-cinnamon': 'birds-tropical/bittern-cinnamon.jpg',
+    // Tropical birds - Cranes
+    'crane-sarus': 'birds-tropical/crane-sarus.jpg',
+    'crane-demoiselle': 'birds-tropical/crane-demoiselle.jpg',
+    'crane-wattled': 'birds-tropical/crane-wattled.jpg',
+    // Tropical birds - Rails
+    'rail-african': 'birds-tropical/rail-african.jpg',
+    'rail-water': 'birds-tropical/rail-water.jpg',
+    // Tropical birds - Swamphens
+    'swamphen-purple': 'birds-tropical/swamphen-purple.jpg',
+    'swamphen-grey': 'birds-tropical/swamphen-grey.jpg',
+    // Tropical birds - Moorhens & Gallinules
+    'moorhen-common': 'birds-tropical/moorhen-common.jpg',
+    'gallinule-azure': 'birds-tropical/gallinule-azure.jpg',
+    // Tropical birds - Darters
+    'darter-oriental': 'birds-tropical/darter-oriental.jpg',
+    'darter-african': 'birds-tropical/darter-african.jpg',
+    // Tropical birds - Cormorants
+    'cormorant-great': 'birds-tropical/cormorant-great.jpg',
+    'cormorant-pied': 'birds-tropical/cormorant-pied.jpg',
+    'cormorant-little': 'birds-tropical/cormorant-little.jpg',
+    // Tropical birds - Frigatebirds
+    'frigatebird-great': 'birds-tropical/frigatebird-great.jpg',
+    'frigatebird-magnificent': 'birds-tropical/frigatebird-magnificent.jpg',
+    // Tropical birds - Boobies
+    'booby-blue': 'birds-tropical/booby-blue.jpg',
+    'booby-red': 'birds-tropical/booby-red.jpg',
+    'booby-masked': 'birds-tropical/booby-masked.jpg',
+    // Tropical birds - Tropicbirds
+    'tropicbird-red': 'birds-tropical/tropicbird-red.jpg',
+    'tropicbird-white': 'birds-tropical/tropicbird-white.jpg',
+    'tropicbird-phoebon': 'birds-tropical/tropicbird-phoebon.jpg',
+    // Tropical birds - Albatross & Petrels
+    'albatross-waved': 'birds-tropical/albatross-waved.jpg',
+    'petrel-giant': 'birds-tropical/petrel-giant.jpg',
+    // Tropical birds - Shearwaters
+    'shearwater-sooty': 'birds-tropical/shearwater-sooty.jpg',
+    'shearwater-wedge': 'birds-tropical/shearwater-wedge.jpg',
+    // Tropical birds - Storm Petrels
+    'storm-petrel-wilson': 'birds-tropical/storm-petrel-wilson.jpg',
+    // Tropical birds - Pelicans
+    'pelican-spot': 'birds-tropical/pelican-spot.jpg',
+    'pelican-brown': 'birds-tropical/pelican-brown.jpg',
+    // Tropical birds - Anhinga
+    'anhinga-american': 'birds-tropical/anhinga-american.jpg',
+    // Tropical birds - Grebes
+    'grebe-horned': 'birds-tropical/grebe-horned.jpg',
+    'grebe-western': 'birds-tropical/grebe-western.jpg',
+    'grebe-eared': 'birds-tropical/grebe-eared.jpg',
     'pike': 'fish-river/pike.jpg',
     'carp': 'fish-river/carp.jpg',
     'trout': 'fish-river/trout.jpg',
@@ -104,7 +256,7 @@ function getImagePath(speciesId, category) {
     if (speciesImagePaths[speciesId]) {
         return `./assets/images/${speciesImagePaths[speciesId]}`;
     }
-    
+
     // Build path based on category
     if (category === 'european') {
         return `./assets/images/birds-european/${speciesId}.jpg`;
@@ -115,9 +267,14 @@ function getImagePath(speciesId, category) {
     } else if (category === 'mediterranean') {
         return `./assets/images/fish-mediterranean/${speciesId}.jpg`;
     } else if (category === 'tropical') {
+        // Check if it's a river tropical fish (freshwater)
+        const riverTropicalIds = ['angelfish', 'discus', 'oscar', 'neon-tetra', 'cardinal-tetra', 'guppy', 'molly', 'platy', 'swordtail', 'betta', 'dwarf-gourami', 'pearl-gourami', 'clown-loach', 'kuhli-loach', 'corydoras', 'pleco', 'otocinclus'];
+        if (riverTropicalIds.includes(speciesId) || speciesId.includes('tetra') || speciesId.includes('gourami') || speciesId.includes('barb') || speciesId.includes('danio') || speciesId.includes('rasbora') || speciesId.includes('loach') || speciesId.includes('cichlid') || speciesId.includes('corydoras') || speciesId.includes('pleco') || speciesId.includes('otocinclus')) {
+            return `./assets/images/fish-river-tropical/${speciesId}.jpg`;
+        }
         return `./assets/images/fish-tropical/${speciesId}.jpg`;
     }
-    
+
     // Fallback
     return `./assets/images/${speciesId}.jpg`;
 }
@@ -128,10 +285,11 @@ import { tropicalBirds } from './birds-tropical.js';
 import { riverFish } from './fish-river.js';
 import { mediterraneanFish } from './fish-mediterranean.js';
 import { tropicalFish } from './fish-tropical.js';
+import { riverTropicalFish } from './fish-river-tropical.js';
 
 // Combine all birds and fish
 const birds = [...europeanBirds, ...tropicalBirds];
-const fish = [...riverFish, ...mediterraneanFish, ...tropicalFish];
+const fish = [...riverFish, ...mediterraneanFish, ...tropicalFish, ...riverTropicalFish];
 
 // Localization data
 const i18n = {
@@ -144,9 +302,10 @@ const i18n = {
         all_birds: 'All Birds',
         all_fish: 'All Fish',
         european: 'European',
-        tropical: 'Tropical',
+        tropical: 'Tropical Saltwater',
         river: 'River',
         mediterranean: 'Mediterranean',
+        river_tropical: 'Tropical Freshwater',
         log_sighting: 'Log a Sighting',
         select_species: 'Select Species:',
         select_date: 'Date:',
@@ -187,9 +346,10 @@ const i18n = {
         all_birds: 'Все птицы',
         all_fish: 'Все рыбы',
         european: 'Европейские',
-        tropical: 'Тропические',
+        tropical: 'Тропические морские',
         river: 'Речные',
         mediterranean: 'Средиземноморские',
+        river_tropical: 'Тропические пресноводные',
         log_sighting: 'Добавить наблюдение',
         select_species: 'Выберите вид:',
         select_date: 'Дата:',
@@ -739,7 +899,20 @@ function renderSpeciesGrid() {
 
     let filtered = species;
     if (currentCategory !== 'all') {
-        filtered = species.filter(s => s.category === currentCategory);
+        if (currentCategory === 'river-tropical') {
+            // Special handling for river-tropical (freshwater tropical fish)
+            const riverTropicalIds = ['angelfish', 'discus', 'oscar', 'neon-tetra', 'cardinal-tetra', 'guppy', 'molly', 'platy', 'swordtail', 'betta', 'dwarf-gourami', 'pearl-gourami', 'clown-loach', 'kuhli-loach', 'corydoras', 'pleco', 'otocinclus'];
+            filtered = species.filter(s => 
+                riverTropicalIds.includes(s.id) || 
+                s.id.includes('tetra') || s.id.includes('gourami') || 
+                s.id.includes('barb') || s.id.includes('danio') || 
+                s.id.includes('rasbora') || s.id.includes('loach') || 
+                s.id.includes('cichlid') || s.id.includes('corydoras') || 
+                s.id.includes('pleco') || s.id.includes('otocinclus')
+            );
+        } else {
+            filtered = species.filter(s => s.category === currentCategory);
+        }
     }
 
     // Filter by search query
@@ -805,9 +978,22 @@ function renderFamilyView(container, species, type) {
     // Group by family
     const families = {};
     let filtered = species;
-    
+
     if (currentCategory !== 'all') {
-        filtered = species.filter(s => s.category === currentCategory);
+        if (currentCategory === 'river-tropical') {
+            // Special handling for river-tropical (freshwater tropical fish)
+            const riverTropicalIds = ['angelfish', 'discus', 'oscar', 'neon-tetra', 'cardinal-tetra', 'guppy', 'molly', 'platy', 'swordtail', 'betta', 'dwarf-gourami', 'pearl-gourami', 'clown-loach', 'kuhli-loach', 'corydoras', 'pleco', 'otocinclus'];
+            filtered = species.filter(s => 
+                riverTropicalIds.includes(s.id) || 
+                s.id.includes('tetra') || s.id.includes('gourami') || 
+                s.id.includes('barb') || s.id.includes('danio') || 
+                s.id.includes('rasbora') || s.id.includes('loach') || 
+                s.id.includes('cichlid') || s.id.includes('corydoras') || 
+                s.id.includes('pleco') || s.id.includes('otocinclus')
+            );
+        } else {
+            filtered = species.filter(s => s.category === currentCategory);
+        }
     }
     
     // Filter by search query
