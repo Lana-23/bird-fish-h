@@ -302,7 +302,7 @@ const i18n = {
         all_birds: 'All Birds',
         all_fish: 'All Fish',
         european: 'European',
-        tropical: 'Tropical Saltwater',
+        tropical: 'Tropical',
         river: 'River',
         mediterranean: 'Mediterranean',
         river_tropical: 'Tropical Freshwater',
