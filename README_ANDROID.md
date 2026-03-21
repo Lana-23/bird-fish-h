@@ -19,15 +19,15 @@ Before building the Android app, make sure you have:
 npm install
 ```
 
-### 2. Sync web assets to Android
+### 2. Build web assets and sync to Android
 
 ```bash
 npm run sync
 ```
 
 This command will:
-- Copy all web files (index.html, app.js, styles.css, assets/) to `android/app/src/main/assets/public`
-- Sync Capacitor plugins and configurations
+- Build web files into `www/` folder
+- Sync Capacitor plugins and configurations to Android project
 
 ## Building the App
 
