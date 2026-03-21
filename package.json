@@ -4,10 +4,10 @@
   "description": "Bird & Fish Tracker - Android App",
   "main": "app.js",
   "scripts": {
-    "sync": "npx cap sync android",
+    "build:web": "mkdir -p www && cp index.html styles.css app.js birds-*.js fish-*.js assets www/",
+    "sync": "npm run build:web && npx cap sync android",
     "open:android": "npx cap open android",
-    "build": "echo 'Web app is already built - just copying to android/www'",
-    "cap:copy": "npx cap copy android"
+    "cap:copy": "npm run build:web && npx cap copy android"
   },
   "dependencies": {
     "@capacitor/android": "^6.0.0",
