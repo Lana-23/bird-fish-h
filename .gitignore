@@ -19,6 +19,16 @@ package-lock.json
 
 # Logs
 *.log
+
+# Android
+android/build/
+android/**/build/
+android/**/outputs/
+android/.gradle/
+android/captures/
+android/.idea/
+android/local.properties
+android/capacitor-cordova-android-plugins/build/
 npm-debug.log*
 
 # Cache

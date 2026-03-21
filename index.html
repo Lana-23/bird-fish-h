@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title data-i18n="app_title">Bird & Fish Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Capacitor -->
+    <script type="module">
+        // Import Capacitor plugins
+        import { App } from '@capacitor/app';
+        import { StatusBar, Style } from '@capacitor/status-bar';
+        import { Keyboard } from '@capacitor/keyboard';
+        
+        // Initialize Capacitor plugins
+        (async () => {
+            try {
+                // Set status bar style
+                await StatusBar.setStyle({ style: Style.Dark });
+                await StatusBar.setBackgroundColor({ color: '#1a1a2e' });
+                
+                // Configure keyboard
+                await Keyboard.setResizeMode({ mode: 'BODY' });
+                await Keyboard.setScroll({ shouldDisableScroll: false, shouldResizeScrollView: true });
+                
+                // Handle back button
+                App.addListener('backButton', () => {
+                    // Custom back button handling if needed
+                    console.log('Back button pressed');
+                });
+            } catch (e) {
+                // Capacitor not available (running in browser)
+                console.log('Running in browser mode');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- Top Navigation -->

@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace "org.apache.cordova"
+    compileSdkVersion 34
+    
+    defaultConfig {
+        minSdkVersion 22
+    }
+    
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':capacitor-android')
+}
