@@ -17,7 +17,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'sea anemones', 'tropical waters'],
             behavior: ['symbiosis with anemones', 'schooling', 'territorial']
         }
-    }
+    },
     {
         id: 'blue-tang',
         name_en: 'Blue Tang',
@@ -35,7 +35,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'Indo-Pacific waters', 'tropical lagoons'],
             behavior: ['herbivorous', 'algae feeding', 'schooling', 'hiding in coral']
         }
-    }
+    },
     {
         id: 'lionfish',
         name_en: 'Lionfish',
@@ -53,7 +53,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters', 'rocky crevices'],
             behavior: ['venomous', 'predator', 'solitary', 'ambush hunting']
         }
-    }
+    },
     {
         id: 'moray-eel',
         name_en: 'Giant Moray Eel',
@@ -71,7 +71,7 @@ export const tropicalFish = [
             habitat: ['coral reef crevices', 'tropical waters', 'rocky caves'],
             behavior: ['nocturnal', 'predator', 'hiding', 'territorial']
         }
-    }
+    },
     {
         id: 'barracuda',
         name_en: 'Great Barracuda',
@@ -89,7 +89,7 @@ export const tropicalFish = [
             habitat: ['tropical waters', 'coral reefs', 'open ocean'],
             behavior: ['fierce predator', 'fast swimmer', 'solitary', 'ambush hunting']
         }
-    }
+    },
     {
         id: 'stingray',
         name_en: 'Blue-spotted Stingray',
@@ -107,7 +107,7 @@ export const tropicalFish = [
             habitat: ['ocean floor', 'sandy bottoms', 'coral reefs', 'shallow lagoons'],
             behavior: ['bottom dwelling', 'gliding', 'camouflage', 'nocturnal']
         }
-    }
+    },
     {
         id: 'seahorse',
         name_en: 'Common Seahorse',
@@ -125,7 +125,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'seagrass beds', 'shallow tropical waters'],
             behavior: ['upright swimming', 'tail grasping', 'male pregnancy', 'camouflage']
         }
-    }
+    },
     {
         id: 'ocellaris-clownfish',
         name_en: 'Ocellaris Clownfish',
@@ -144,7 +144,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'percula-clownfish',
         name_en: 'Percula Clownfish',
@@ -163,7 +163,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'maroon-clownfish',
         name_en: 'Maroon Clownfish',
@@ -182,7 +182,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pink-skunk-clownfish',
         name_en: 'Pink Skunk Clownfish',
@@ -201,7 +201,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'red-sebae-clownfish',
         name_en: 'Red Sebae Clownfish',
@@ -220,7 +220,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'tomato-clownfish',
         name_en: 'Tomato Clownfish',
@@ -239,7 +239,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'saddleback-clownfish',
         name_en: 'Saddleback Clownfish',
@@ -258,7 +258,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'sebae-clownfish',
         name_en: 'Sebae Clownfish',
@@ -277,7 +277,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'clarkii-clownfish',
         name_en: 'Clark\'s Clownfish',
@@ -296,7 +296,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'allardii-clownfish',
         name_en: 'Allard\'s Clownfish',
@@ -315,7 +315,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'yellow-tang',
         name_en: 'Yellow Tang',
@@ -334,7 +334,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'purple-tang',
         name_en: 'Purple Tang',
@@ -353,7 +353,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'powder-blue-tang',
         name_en: 'Powder Blue Tang',
@@ -372,7 +372,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'palette-tang',
         name_en: 'Palette Tang',
@@ -391,7 +391,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'zebra-tang',
         name_en: 'Zebra Tang',
@@ -410,7 +410,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'sailfin-tang',
         name_en: 'Sailfin Tang',
@@ -429,7 +429,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'red-sea-tang',
         name_en: 'Red Sea Tang',
@@ -448,7 +448,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'unicorn-tang',
         name_en: 'Unicorn Tang',
@@ -467,7 +467,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'bluespine-unicorn',
         name_en: 'Bluespine Unicornfish',
@@ -486,7 +486,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'orange-shoulder-tang',
         name_en: 'Orange Shoulder Tang',
@@ -505,7 +505,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'powder-brown-tang',
         name_en: 'Powder Brown Tang',
@@ -524,7 +524,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'convict-tang',
         name_en: 'Convict Tang',
@@ -543,7 +543,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'eyestripe-tang',
         name_en: 'Eyestripe Tang',
@@ -562,7 +562,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'goldrim-tang',
         name_en: 'Goldrim Tang',
@@ -581,7 +581,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'lipstick-tang',
         name_en: 'Lipstick Tang',
@@ -600,7 +600,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'ringtail-tang',
         name_en: 'Ringtail Tang',
@@ -619,7 +619,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'doctorfish',
         name_en: 'Doctorfish',
@@ -638,7 +638,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'ocean-surgeon',
         name_en: 'Ocean Surgeonfish',
@@ -657,7 +657,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'yellow-eye-tang',
         name_en: 'Yellow-eye Tang',
@@ -676,7 +676,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'emperor-angelfish',
         name_en: 'Emperor Angelfish',
@@ -695,7 +695,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'queen-angelfish',
         name_en: 'Queen Angelfish',
@@ -714,7 +714,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'blue-angelfish',
         name_en: 'Blue Angelfish',
@@ -733,7 +733,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'french-angelfish',
         name_en: 'French Angelfish',
@@ -752,7 +752,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'gray-angelfish',
         name_en: 'Gray Angelfish',
@@ -771,7 +771,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'rock-beauty',
         name_en: 'Rock Beauty',
@@ -790,7 +790,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'cortez-angelfish',
         name_en: 'Cortez Angelfish',
@@ -809,7 +809,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'majestic-angelfish',
         name_en: 'Majestic Angelfish',
@@ -828,7 +828,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'blueface-angelfish',
         name_en: 'Blueface Angelfish',
@@ -847,7 +847,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'sixbar-angelfish',
         name_en: 'Sixbar Angelfish',
@@ -866,7 +866,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'maculosus-angelfish',
         name_en: 'Maculosus Angelfish',
@@ -885,7 +885,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'regal-angelfish',
         name_en: 'Regal Angelfish',
@@ -904,7 +904,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'flame-angelfish',
         name_en: 'Flame Angelfish',
@@ -923,7 +923,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'cherub-angelfish',
         name_en: 'Cherub Angelfish',
@@ -942,7 +942,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'lemonpeel-angelfish',
         name_en: 'Lemonpeel Angelfish',
@@ -961,7 +961,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'coral-beauty',
         name_en: 'Coral Beauty',
@@ -980,7 +980,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'keyhole-angelfish',
         name_en: 'Keyhole Angelfish',
@@ -999,7 +999,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'midnight-angelfish',
         name_en: 'Midnight Angelfish',
@@ -1018,7 +1018,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pearly-angelfish',
         name_en: 'Pearly Angelfish',
@@ -1037,7 +1037,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'flameback-angelfish',
         name_en: 'Flameback Angelfish',
@@ -1056,7 +1056,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'threadfin-butterflyfish',
         name_en: 'Threadfin Butterflyfish',
@@ -1075,7 +1075,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'copperband-butterflyfish',
         name_en: 'Copperband Butterflyfish',
@@ -1094,7 +1094,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'longnose-butterflyfish',
         name_en: 'Longnose Butterflyfish',
@@ -1113,7 +1113,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'racoon-butterflyfish',
         name_en: 'Racoon Butterflyfish',
@@ -1132,7 +1132,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'teardrop-butterflyfish',
         name_en: 'Teardrop Butterflyfish',
@@ -1151,7 +1151,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'mask-butterflyfish',
         name_en: 'Mask Butterflyfish',
@@ -1170,7 +1170,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pygmy-butterflyfish',
         name_en: 'Pygmy Butterflyfish',
@@ -1189,7 +1189,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'spotband-butterflyfish',
         name_en: 'Spotband Butterflyfish',
@@ -1208,7 +1208,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'redfin-butterflyfish',
         name_en: 'Redfin Butterflyfish',
@@ -1227,7 +1227,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'lattice-butterflyfish',
         name_en: 'Lattice Butterflyfish',
@@ -1246,7 +1246,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'ornate-butterflyfish',
         name_en: 'Ornate Butterflyfish',
@@ -1265,7 +1265,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pearce-butterflyfish',
         name_en: 'Pearce\'s Butterflyfish',
@@ -1284,7 +1284,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'bluecheek-butterflyfish',
         name_en: 'Blue-cheek Butterflyfish',
@@ -1303,7 +1303,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'forceps-butterflyfish',
         name_en: 'Forceps Butterflyfish',
@@ -1322,7 +1322,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'scrawled-butterflyfish',
         name_en: 'Scrawled Butterflyfish',
@@ -1341,7 +1341,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'eightband-butterflyfish',
         name_en: 'Eightband Butterflyfish',
@@ -1360,7 +1360,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'fourspot-butterflyfish',
         name_en: 'Fourspot Butterflyfish',
@@ -1379,7 +1379,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'redtail-butterflyfish',
         name_en: 'Redtail Butterflyfish',
@@ -1398,7 +1398,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'saddle-butterflyfish',
         name_en: 'Saddle Butterflyfish',
@@ -1417,7 +1417,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'triangle-butterflyfish',
         name_en: 'Triangle Butterflyfish',
@@ -1436,7 +1436,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'coris-wrasse',
         name_en: 'Coris Wrasse',
@@ -1455,7 +1455,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'hogfish',
         name_en: 'Hogfish',
@@ -1474,7 +1474,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'sheephead',
         name_en: 'California Sheephead',
@@ -1493,7 +1493,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'tuskfish',
         name_en: 'Blue Tuskfish',
@@ -1512,7 +1512,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'flasher-wrasse',
         name_en: 'Flasher Wrasse',
@@ -1531,7 +1531,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'fairy-wrasse',
         name_en: 'Fairy Wrasse',
@@ -1550,7 +1550,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'cleaner-wrasse',
         name_en: 'Cleaner Wrasse',
@@ -1569,7 +1569,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'bird-wrasse',
         name_en: 'Bird Wrasse',
@@ -1588,7 +1588,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'harlequin-tuskfish',
         name_en: 'Harlequin Tuskfish',
@@ -1607,7 +1607,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'maori-wrasse',
         name_en: 'Maori Wrasse',
@@ -1626,7 +1626,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'slate-pencil-wrasse',
         name_en: 'Slate Pencil Wrasse',
@@ -1645,7 +1645,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'sixline-wrasse',
         name_en: 'Six-line Wrasse',
@@ -1664,7 +1664,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'eightline-wrasse',
         name_en: 'Eight-line Wrasse',
@@ -1683,7 +1683,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'leopard-wrasse',
         name_en: 'Leopard Wrasse',
@@ -1702,7 +1702,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'green-wrasse',
         name_en: 'Green Wrasse',
@@ -1721,7 +1721,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'bluehead-wrasse',
         name_en: 'Bluehead Wrasse',
@@ -1740,7 +1740,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'spanish-hogfish',
         name_en: 'Spanish Hogfish',
@@ -1759,7 +1759,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'saddle-wrasse',
         name_en: 'Saddle Wrasse',
@@ -1778,7 +1778,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'puddingwife-wrasse',
         name_en: 'Puddingwife Wrasse',
@@ -1797,7 +1797,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'yellowhead-wrasse',
         name_en: 'Yellowhead Wrasse',
@@ -1816,7 +1816,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'clown-triggerfish',
         name_en: 'Clown Triggerfish',
@@ -1835,7 +1835,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'titan-triggerfish',
         name_en: 'Titan Triggerfish',
@@ -1854,7 +1854,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'gray-triggerfish',
         name_en: 'Gray Triggerfish',
@@ -1873,7 +1873,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'queen-triggerfish',
         name_en: 'Queen Triggerfish',
@@ -1892,7 +1892,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'blue-throat-triggerfish',
         name_en: 'Blue-throat Triggerfish',
@@ -1911,7 +1911,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'orange-lined-triggerfish',
         name_en: 'Orange-lined Triggerfish',
@@ -1930,7 +1930,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pink-tailed-triggerfish',
         name_en: 'Pink-tailed Triggerfish',
@@ -1949,7 +1949,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'black-triggerfish',
         name_en: 'Black Triggerfish',
@@ -1968,7 +1968,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'wedgetail-triggerfish',
         name_en: 'Wedgetail Triggerfish',
@@ -1987,7 +1987,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'picasso-triggerfish',
         name_en: 'Picasso Triggerfish',
@@ -2006,7 +2006,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'grouper',
         name_en: 'Mediterranean Grouper',
@@ -2025,7 +2025,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'dusky-grouper',
         name_en: 'Dusky Grouper',
@@ -2044,7 +2044,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'goldblotch-grouper',
         name_en: 'Goldblotch Grouper',
@@ -2063,7 +2063,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'white-grouper',
         name_en: 'White Grouper',
@@ -2082,7 +2082,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'giant-grouper',
         name_en: 'Giant Grouper',
@@ -2101,7 +2101,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'coral-grouper',
         name_en: 'Coral Grouper',
@@ -2120,7 +2120,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'blacktip-grouper',
         name_en: 'Blacktip Grouper',
@@ -2139,7 +2139,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'red-grouper',
         name_en: 'Red Grouper',
@@ -2158,7 +2158,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'gag-grouper',
         name_en: 'Gag Grouper',
@@ -2177,7 +2177,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'scamp-grouper',
         name_en: 'Scamp Grouper',
@@ -2196,7 +2196,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'yellowfin-grouper',
         name_en: 'Yellowfin Grouper',
@@ -2215,7 +2215,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'yellowmouth-grouper',
         name_en: 'Yellowmouth Grouper',
@@ -2234,7 +2234,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'coney-grouper',
         name_en: 'Coney Grouper',
@@ -2253,7 +2253,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'graysby-grouper',
         name_en: 'Graysby Grouper',
@@ -2272,7 +2272,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'rock-hind',
         name_en: 'Rock Hind',
@@ -2291,7 +2291,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'turkeyfish',
         name_en: 'Turkeyfish',
@@ -2310,7 +2310,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'firefish',
         name_en: 'Firefish',
@@ -2329,7 +2329,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'dartfish',
         name_en: 'Dartfish',
@@ -2348,7 +2348,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'cardinalfish',
         name_en: 'Banggai Cardinalfish',
@@ -2367,7 +2367,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pajama-cardinalfish',
         name_en: 'Pajama Cardinalfish',
@@ -2386,7 +2386,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'flamefish',
         name_en: 'Flamefish',
@@ -2405,7 +2405,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'squirrelfish',
         name_en: 'Squirrelfish',
@@ -2424,7 +2424,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'soldierfish',
         name_en: 'Soldierfish',
@@ -2443,7 +2443,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'cornetfish',
         name_en: 'Cornetfish',
@@ -2462,7 +2462,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'trumpetfish',
         name_en: 'Trumpetfish',
@@ -2481,7 +2481,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pipefish',
         name_en: 'Pipefish',
@@ -2500,7 +2500,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'leafy-seadragon',
         name_en: 'Leafy Seadragon',
@@ -2519,7 +2519,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'weedy-seadragon',
         name_en: 'Weedy Seadragon',
@@ -2538,7 +2538,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'ghost-pipefish',
         name_en: 'Ghost Pipefish',
@@ -2557,7 +2557,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'frogfish',
         name_en: 'Frogfish',
@@ -2576,7 +2576,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'stonefish',
         name_en: 'Stonefish',
@@ -2595,7 +2595,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'scorpionfish',
         name_en: 'Scorpionfish',
@@ -2614,7 +2614,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'peacock-flounder',
         name_en: 'Peacock Flounder',
@@ -2633,7 +2633,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'boxfish',
         name_en: 'Yellow Boxfish',
@@ -2652,7 +2652,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'cowfish',
         name_en: 'Longhorn Cowfish',
@@ -2671,7 +2671,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'filefish',
         name_en: 'Scrawled Filefish',
@@ -2690,7 +2690,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'batfish',
         name_en: 'Spadefish',
@@ -2709,7 +2709,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'teira-batfish',
         name_en: 'Teira Batfish',
@@ -2728,7 +2728,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'orbicular-batfish',
         name_en: 'Orbicular Batfish',
@@ -2747,7 +2747,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'pinnatus-batfish',
         name_en: 'Pinnatus Batfish',
@@ -2766,7 +2766,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'mono',
         name_en: 'Mono Angelfish',
@@ -2785,7 +2785,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'scat',
         name_en: 'Spotted Scat',
@@ -2804,7 +2804,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'archerfish',
         name_en: 'Archerfish',
@@ -2823,7 +2823,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'mudskipper',
         name_en: 'Mudskipper',
@@ -2842,7 +2842,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'neon-goby',
         name_en: 'Neon Goby',
@@ -2861,7 +2861,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'shrimp-goby',
         name_en: 'Shrimp Goby',
@@ -2880,7 +2880,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'watchman-goby',
         name_en: 'Watchman Goby',
@@ -2899,7 +2899,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'green-moray',
         name_en: 'Green Moray',
@@ -2918,7 +2918,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'snowflake-moray',
         name_en: 'Snowflake Moray',
@@ -2937,7 +2937,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'zebra-moray',
         name_en: 'Zebra Moray',
@@ -2956,7 +2956,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'dragon-moray',
         name_en: 'Dragon Moray',
@@ -2975,7 +2975,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'viperfish',
         name_en: 'Viperfish',
@@ -2994,7 +2994,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'lanternfish',
         name_en: 'Lanternfish',
@@ -3013,7 +3013,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'anglerfish',
         name_en: 'Anglerfish',
@@ -3032,7 +3032,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'eagle-ray',
         name_en: 'Eagle Ray',
@@ -3051,7 +3051,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'manta-ray',
         name_en: 'Manta Ray',
@@ -3070,7 +3070,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'moorish-idol',
         name_en: 'Moorish Idol',
@@ -3089,7 +3089,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'royal-gramma',
         name_en: 'Royal Gramma',
@@ -3108,7 +3108,7 @@ export const tropicalFish = [
             habitat: ['coral reefs', 'tropical waters'],
             behavior: ['reef dwelling', 'marine']
         }
-    }
+    },
     {
         id: 'mandarinfish',
         name_en: 'Mandarinfish',
