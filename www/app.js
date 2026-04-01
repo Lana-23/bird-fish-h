@@ -336,6 +336,23 @@ const i18n = {
         export_data: 'Export Data',
         import_data: 'Import Data',
         data_note: 'Your sightings are automatically saved to browser storage (IndexedDB) and persist through cache clears.',
+        user_guide_title: '📖 User Guide',
+        guide_getting_started: 'Getting Started',
+        guide_getting_started_text: 'Welcome to Bird & Fish Tracker! This app helps you track and log your bird and fish sightings. Use the tabs at the top to navigate between Birds, Fish, Sightings, and Statistics.',
+        guide_browse_species: 'Browse Species',
+        guide_browse_species_text: 'In the Birds and Fish tabs, you can browse species by category or family. Click on any species card to view detailed information including photos, descriptions, and characteristics.',
+        guide_search: 'Search',
+        guide_search_text: 'Use the search bar to quickly find specific species by name. The search filters results in real-time as you type.',
+        guide_log_sighting: 'Log a Sighting',
+        guide_log_sighting_text: 'Go to the Sightings tab to log a new sighting. Select a species from the dropdown, choose the date, add optional notes, and click "Add Sighting". You can also quickly mark a species as seen today from its detail view.',
+        guide_statistics: 'View Statistics',
+        guide_statistics_text: 'The Stats tab shows your total sightings, unique species count, breakdown by type (birds vs fish), and a calendar view of the last 30 days showing which days you had sightings.',
+        guide_data_management: 'Data Management',
+        guide_data_management_text: 'Your sightings are automatically saved to your browser\'s IndexedDB storage. You can export your data to a JSON file for backup, or import previously exported data. Data persists even if you clear the browser cache.',
+        guide_language: 'Language & Theme',
+        guide_language_text: 'Use the language selector in the top navigation to switch between English and Russian. Click the moon/sun icon to toggle between dark and light themes.',
+        guide_login: 'Login (Optional)',
+        guide_login_text: 'Click "Login" to enter your email and save sightings to the cloud. Without logging in, your data is saved only in this browser. Login allows you to access your sightings from multiple devices (cloud sync feature requires server implementation).',
     },
     ru: {
         app_title: '🦅 🐟 Трекер',
@@ -380,6 +397,23 @@ const i18n = {
         export_data: 'Экспорт данных',
         import_data: 'Импорт данных',
         data_note: 'Наблюдения автоматически сохраняются в IndexedDB и не удаляются при очистке кэша.',
+        user_guide_title: '📖 Руководство пользователя',
+        guide_getting_started: 'Начало работы',
+        guide_getting_started_text: 'Добро пожаловать в Bird & Fish Tracker! Это приложение помогает вам отслеживать и регистрировать наблюдения за птицами и рыбами. Используйте вкладки вверху для навигации между птицами, рыбами, наблюдениями и статистикой.',
+        guide_browse_species: 'Просмотр видов',
+        guide_browse_species_text: 'На вкладках «Птицы» и «Рыбы» вы можете просматривать виды по категориям или семействам. Нажмите на любую карточку вида, чтобы просмотреть подробную информацию, включая фотографии, описания и характеристики.',
+        guide_search: 'Поиск',
+        guide_search_text: 'Используйте строку поиска для быстрого поиска конкретных видов по названию. Поиск фильтрует результаты в реальном времени по мере ввода.',
+        guide_log_sighting: 'Регистрация наблюдения',
+        guide_log_sighting_text: 'Перейдите на вкладку «Наблюдения», чтобы зарегистрировать новое наблюдение. Выберите вид из раскрывающегося списка, выберите дату, добавьте необязательные заметки и нажмите «Добавить наблюдение». Вы также можете быстро отметить вид как увиденный сегодня из его подробного просмотра.',
+        guide_statistics: 'Просмотр статистики',
+        guide_statistics_text: 'Вкладка «Статистика» показывает общее количество наблюдений, количество уникальных видов, разбивку по типам (птицы против рыб) и вид календаря за последние 30 дней, показывающий, в какие дни у вас были наблюдения.',
+        guide_data_management: 'Управление данными',
+        guide_data_management_text: 'Ваши наблюдения автоматически сохраняются в хранилище IndexedDB вашего браузера. Вы можете экспортировать свои данные в файл JSON для резервного копирования или импортировать ранее экспортированные данные. Данные сохраняются даже при очистке кэша браузера.',
+        guide_language: 'Язык и тема',
+        guide_language_text: 'Используйте селектор языка в верхней навигации для переключения между английским и русским. Нажмите на значок луны/солнца для переключения между темной и светлой темами.',
+        guide_login: 'Вход (опционально)',
+        guide_login_text: 'Нажмите «Войти», чтобы ввести свой email и сохранить наблюдения в облаке. Без входа ваши данные сохраняются только в этом браузере. Вход позволяет получить доступ к вашим наблюдениям с нескольких устройств (функция синхронизации с облаком требует реализации на сервере).',
     }
 };
 
@@ -405,8 +439,13 @@ const DB_NAME = 'BirdFishTrackerDB';
 const DB_VERSION = 1;
 const DB_STORE = 'sightings';
 
+// VK Mini Apps environment detection
+let isVKMobile = false;
+let isVKWeb = false;
+
 // Initialize app
 document.addEventListener('DOMContentLoaded', () => {
+    initVKBridge();
     initLanguage();
     initUser();
     initIndexedDB();
@@ -419,6 +458,76 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSpeciesSelect();
     renderSightings();
 });
+
+// VK Bridge Initialization
+function initVKBridge() {
+    // Check if running in VK environment
+    if (window.vkBridge) {
+        // Detect VK environment type
+        const userAgent = navigator.userAgent.toLowerCase();
+        
+        if (userAgent.includes('vkapp')) {
+            isVKMobile = true;
+            document.body.classList.add('vk-mobile');
+            console.log('Running in VK Mobile App');
+        } else if (userAgent.includes('vk.com') || userAgent.includes('vk')) {
+            isVKWeb = true;
+            document.body.classList.add('vk-web');
+            console.log('Running in VK Web');
+        }
+
+        // Initialize VK Bridge
+        vkBridge.send('VKWebAppInit')
+            .then((data) => {
+                console.log('VK Bridge initialized:', data);
+                // Set header color to match app theme
+                return vkBridge.send('VKWebAppSetHeaderColor', { color: '#1a1a2e' });
+            })
+            .then(() => {
+                console.log('VK Header color set');
+            })
+            .catch((error) => {
+                console.log('VK Bridge init error (expected in browser):', error);
+            });
+
+        // Subscribe to VK Bridge events
+        vkBridge.subscribe((event) => {
+            console.log('VK Bridge event:', event);
+            handleVKEvent(event);
+        });
+
+        // Get VK environment info
+        vkBridge.send('VKWebAppGetClientVersion')
+            .then((data) => {
+                console.log('VK Client Version:', data);
+            })
+            .catch(() => {});
+
+        // Request location if needed (for future features)
+        // vkBridge.send('VKWebAppGetLocation');
+    }
+}
+
+function handleVKEvent(event) {
+    const { type, data } = event.detail || event;
+    
+    switch (type) {
+        case 'VKWebAppUpdateConfig':
+            console.log('VK config updated');
+            break;
+        case 'VKWebAppViewShow':
+            console.log('VK View Show');
+            break;
+        case 'VKWebAppViewHide':
+            console.log('VK View Hide');
+            break;
+        case 'VKWebAppWindowClosed':
+            console.log('VK Window Closed');
+            break;
+        default:
+            console.log('Unhandled VK event:', type);
+    }
+}
 
 // IndexedDB Management
 function initIndexedDB() {
@@ -811,6 +920,21 @@ function setupEventListeners() {
     document.getElementById('modal-close').addEventListener('click', closeModal);
     document.getElementById('detail-modal').addEventListener('click', (e) => {
         if (e.target.id === 'detail-modal') closeModal();
+    });
+
+    // User Guide button
+    document.getElementById('user-guide-btn')?.addEventListener('click', () => {
+        document.getElementById('user-guide-modal').classList.add('active');
+    });
+
+    // User Guide modal close
+    document.getElementById('user-guide-modal-close')?.addEventListener('click', () => {
+        document.getElementById('user-guide-modal').classList.remove('active');
+    });
+    document.getElementById('user-guide-modal')?.addEventListener('click', (e) => {
+        if (e.target.id === 'user-guide-modal') {
+            document.getElementById('user-guide-modal').classList.remove('active');
+        }
     });
 
     // Quick sighting button

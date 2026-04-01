@@ -2,87 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#1a1a2e">
+    <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- VK Mini Apps -->
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    
+    <!-- VK Mini Apps specific -->
+    <meta name="vk-mini-app" content="true">
+    <meta name="vk:app-id" content="YOUR_VK_APP_ID">
+    
     <title data-i18n="app_title">Bird & Fish Tracker</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- VK Mini Apps & Capacitor -->
-    <script type="module">
-        // Initialize VK Bridge (works in VK environment, gracefully fails in browser)
-        if (window.vkBridge) {
-            vkBridge.send('VKWebAppInit')
-                .then(() => {
-                    console.log('VK Bridge initialized');
-                    // Set header color for VK Mini Apps
-                    return vkBridge.send('VKWebAppSetHeaderColor', { color: '#1a1a2e' });
-                })
-                .then(() => {
-                    console.log('VK Header color set');
-                })
-                .catch((error) => {
-                    console.log('VK Bridge not available (browser mode)');
-                });
-            
-            // Subscribe to VK Bridge events
-            vkBridge.subscribe((event) => {
-                console.log('VK Bridge event:', event);
-            });
-        }
-
-        // Import Capacitor plugins (only works in native mobile app context)
-        // These will fail gracefully in browser
-        async function initCapacitor() {
-            try {
-                const { App } = await import('@capacitor/app');
-                const { StatusBar, Style } = await import('@capacitor/status-bar');
-                const { Keyboard } = await import('@capacitor/keyboard');
-
-                // Set status bar style
-                await StatusBar.setStyle({ style: Style.Dark });
-                await StatusBar.setBackgroundColor({ color: '#1a1a2e' });
-
-                // Configure keyboard
-                await Keyboard.setResizeMode({ mode: 'BODY' });
-                await Keyboard.setScroll({ shouldDisableScroll: false, shouldResizeScrollView: true });
-
-                // Handle back button
-                App.addListener('backButton', () => {
-                    console.log('Back button pressed');
-                });
-                
-                console.log('Capacitor plugins initialized');
-            } catch (e) {
-                // Capacitor not available (running in browser or VK)
-                console.log('Running in browser/VK mode (Capacitor not available)');
-            }
+    
+    <!-- VK Bridge -->
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    
+    <style>
+        /* VK-specific optimizations */
+        html, body {
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
         }
         
-        initCapacitor();
-    </script>
+        /* Prevent text selection in VK app */
+        body {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        input, textarea, select {
+            -webkit-user-select: auto;
+            user-select: auto;
+        }
+    </style>
 </head>
 <body>
+    <!-- Loading screen for VK -->
+    <div id="vk-loading" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #1a1a2e; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+        <div style="text-align: center; color: white;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🦅 🐟</div>
+            <div style="font-size: 1.2rem;">Loading...</div>
+        </div>
+    </div>
+
     <!-- Top Navigation -->
-     
-     <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108140428', 'ym');
-
-    ym(108140428, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/108140428" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
     <nav class="top-nav">
         <div class="nav-content">
             <h1 class="logo" data-i18n="app_title">🦅 🐟 Tracker</h1>
@@ -115,7 +80,7 @@
                     </div>
                     <button type="submit" class="btn-primary" data-i18n="login_button">Login</button>
                 </form>
-                <p class="login-note" data-i18n="login_note">No password required. We'll send you a magic link (not implemented yet).</p>
+                <p class="login-note" data-i18n="login_note">No password required. A magic link will be sent to your email.</p>
             </div>
         </div>
     </div>
@@ -211,7 +176,7 @@
                     </div>
                     <p class="data-note" data-i18n="data_note">Your sightings are automatically saved to browser storage (IndexedDB) and persist through cache clears.</p>
                 </div>
-            
+
                 <div class="stats-summary">
                     <div class="stat-card">
                         <div class="stat-value" id="total-sightings">0</div>
@@ -303,6 +268,6 @@
         </div>
     </div>
 
-    <script type="module" src="app.js?v=17"></script>
+    <script type="module" src="app-vk.js"></script>
 </body>
 </html>

@@ -36,6 +36,19 @@ html, body {
     overflow: hidden;
 }
 
+/* VK Mini Apps specific styles */
+.vk-mobile body,
+.vk-web body {
+    /* Use VK theme colors if available */
+    --vk-bg-color: var(--bg-color);
+    --vk-text-color: var(--text-color);
+}
+
+/* Prevent pull-to-refresh in VK Mini Apps */
+body {
+    overscroll-behavior-y: contain;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -1000,4 +1013,126 @@ body {
 .empty-state-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+/* User Guide Button */
+.user-guide-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 99;
+    padding: 0;
+}
+
+.user-guide-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+}
+
+.user-guide-btn:active {
+    transform: scale(1.05);
+}
+
+.guide-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* User Guide Modal */
+.user-guide-modal-content {
+    max-width: 700px;
+    max-height: 85vh;
+}
+
+.user-guide-body {
+    padding: 2rem 1.5rem;
+}
+
+.user-guide-body h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.guide-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.guide-section {
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.guide-section h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.guide-section p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Responsive adjustments for user guide */
+@media (max-width: 768px) {
+    .user-guide-btn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .guide-icon {
+        font-size: 1.3rem;
+    }
+
+    .user-guide-modal-content {
+        max-width: 95%;
+        max-height: 90vh;
+    }
+
+    .user-guide-body {
+        padding: 1.5rem 1rem;
+    }
+
+    .guide-sections {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-guide-btn {
+        bottom: 0.75rem;
+        right: 0.75rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .guide-icon {
+        font-size: 1.2rem;
+    }
 }

@@ -7,37 +7,63 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- VK Mini Apps -->
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <title data-i18n="app_title">Bird & Fish Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Capacitor -->
+
+    <!-- VK Mini Apps & Capacitor -->
     <script type="module">
-        // Import Capacitor plugins
-        import { App } from '@capacitor/app';
-        import { StatusBar, Style } from '@capacitor/status-bar';
-        import { Keyboard } from '@capacitor/keyboard';
-        
-        // Initialize Capacitor plugins
-        (async () => {
+        // Initialize VK Bridge (works in VK environment, gracefully fails in browser)
+        if (window.vkBridge) {
+            vkBridge.send('VKWebAppInit')
+                .then(() => {
+                    console.log('VK Bridge initialized');
+                    // Set header color for VK Mini Apps
+                    return vkBridge.send('VKWebAppSetHeaderColor', { color: '#1a1a2e' });
+                })
+                .then(() => {
+                    console.log('VK Header color set');
+                })
+                .catch((error) => {
+                    console.log('VK Bridge not available (browser mode)');
+                });
+            
+            // Subscribe to VK Bridge events
+            vkBridge.subscribe((event) => {
+                console.log('VK Bridge event:', event);
+            });
+        }
+
+        // Import Capacitor plugins (only works in native mobile app context)
+        // These will fail gracefully in browser
+        async function initCapacitor() {
             try {
+                const { App } = await import('@capacitor/app');
+                const { StatusBar, Style } = await import('@capacitor/status-bar');
+                const { Keyboard } = await import('@capacitor/keyboard');
+
                 // Set status bar style
                 await StatusBar.setStyle({ style: Style.Dark });
                 await StatusBar.setBackgroundColor({ color: '#1a1a2e' });
-                
+
                 // Configure keyboard
                 await Keyboard.setResizeMode({ mode: 'BODY' });
                 await Keyboard.setScroll({ shouldDisableScroll: false, shouldResizeScrollView: true });
-                
+
                 // Handle back button
                 App.addListener('backButton', () => {
-                    // Custom back button handling if needed
                     console.log('Back button pressed');
                 });
+                
+                console.log('Capacitor plugins initialized');
             } catch (e) {
-                // Capacitor not available (running in browser)
-                console.log('Running in browser mode');
+                // Capacitor not available (running in browser or VK)
+                console.log('Running in browser/VK mode (Capacitor not available)');
             }
-        })();
+        }
+        
+        initCapacitor();
     </script>
 </head>
 <body>
@@ -228,6 +254,55 @@
         </div>
     </div>
 
-    <script type="module" src="app.js?v=16"></script>
+    <!-- User Guide Button -->
+    <button class="user-guide-btn" id="user-guide-btn" title="User Guide">
+        <span class="guide-icon">❓</span>
+    </button>
+
+    <!-- User Guide Modal -->
+    <div class="modal" id="user-guide-modal">
+        <div class="modal-content user-guide-modal-content">
+            <button class="modal-close" id="user-guide-modal-close">&times;</button>
+            <div class="user-guide-body">
+                <h2 data-i18n="user_guide_title">📖 User Guide</h2>
+                <div class="guide-sections">
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_getting_started">Getting Started</h3>
+                        <p data-i18n="guide_getting_started_text">Welcome to Bird & Fish Tracker! This app helps you track and log your bird and fish sightings. Use the tabs at the top to navigate between Birds, Fish, Sightings, and Statistics.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_browse_species">Browse Species</h3>
+                        <p data-i18n="guide_browse_species_text">In the Birds and Fish tabs, you can browse species by category or family. Click on any species card to view detailed information including photos, descriptions, and characteristics.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_search">Search</h3>
+                        <p data-i18n="guide_search_text">Use the search bar to quickly find specific species by name. The search filters results in real-time as you type.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_log_sighting">Log a Sighting</h3>
+                        <p data-i18n="guide_log_sighting_text">Go to the Sightings tab to log a new sighting. Select a species from the dropdown, choose the date, add optional notes, and click "Add Sighting". You can also quickly mark a species as seen today from its detail view.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_statistics">View Statistics</h3>
+                        <p data-i18n="guide_statistics_text">The Stats tab shows your total sightings, unique species count, breakdown by type (birds vs fish), and a calendar view of the last 30 days showing which days you had sightings.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_data_management">Data Management</h3>
+                        <p data-i18n="guide_data_management_text">Your sightings are automatically saved to your browser's IndexedDB storage. You can export your data to a JSON file for backup, or import previously exported data. Data persists even if you clear the browser cache.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_language">Language & Theme</h3>
+                        <p data-i18n="guide_language_text">Use the language selector in the top navigation to switch between English and Russian. Click the moon/sun icon to toggle between dark and light themes.</p>
+                    </div>
+                    <div class="guide-section">
+                        <h3 data-i18n="guide_login">Login (Optional)</h3>
+                        <p data-i18n="guide_login_text">Click "Login" to enter your email and save sightings to the cloud. Without logging in, your data is saved only in this browser. Login allows you to access your sightings from multiple devices (cloud sync feature requires server implementation).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js?v=17"></script>
 </body>
 </html>

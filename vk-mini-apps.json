@@ -1,0 +1,40 @@
+{
+  "name": "Bird & Fish Tracker",
+  "short_name": "BirdFish Tracker",
+  "description": "Track and log your bird and fish sightings",
+  "description_ru": "Отслеживайте и регистрируйте свои наблюдения за птицами и рыбами",
+  "version": "1.0.0",
+  "icons": {
+    "576": "https://your-domain.com/icon-576.png"
+  },
+  "cover": {
+    "image": "https://your-domain.com/cover.png",
+    "slogan": "🦅 🐟 Трекер наблюдений"
+  },
+  "features": [
+    "Browse birds and fish species",
+    "Log sightings with dates and notes",
+    "View statistics and data management",
+    "Multi-language support (EN/RU)",
+    "Dark/Light theme"
+  ],
+  "features_ru": [
+    "Просмотр видов птиц и рыб",
+    "Регистрация наблюдений с датами и заметками",
+    "Статистика и управление данными",
+    "Поддержка нескольких языков (EN/RU)",
+    "Темная/Светлая тема"
+  ],
+  "categories": [
+    "Lifestyle",
+    "Education"
+  ],
+  "orientation": "portrait",
+  "theme_color": "#1a1a2e",
+  "background_color": "#f0f7ff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "supported_languages": ["en", "ru"]
+}

@@ -11,7 +11,13 @@ export const riverTropicalFish = [
         description_en: 'Triangular body shape with long flowing fins. Silver with vertical black stripes. Popular aquarium fish from Amazon basin.',
         description_ru: 'Треугольная форма тела с длинными плавниками. Серебристая с вертикальными чёрными полосами. Популярная аквариумная рыба из бассейна Амазонки.',
         characteristics: {
-            size: 'medium (15-20 cm)',,
+            size: 'medium (15-20 cm)',
+            color: ['silver', 'white', 'gray'],
+            features: ['triangular body', 'long flowing fins', 'vertical black stripes'],
+            habitat: ['Amazon basin', 'slow-moving waters', 'planted areas'],
+            behavior: ['peaceful', 'schooling', 'mid-level dweller'],
+        },
+    },
     {
         id: 'discus',
         name_en: 'Discus',
@@ -242,7 +248,7 @@ export const riverTropicalFish = [
     },
     {
         id: 'corydoras-sterbai',
-        name_en: 'Sterba's Corydoras',
+        name_en: 'Sterba\'s Corydoras',
         name_ru: 'Коридорас Штерба',
         latin_name: 'Corydoras sterbai',
         family: 'Callichthyidae',
@@ -880,19 +886,12 @@ export const riverTropicalFish = [
         description_ru: 'Уникальная рыба, которая плавает под углом головой вниз. Коричневая с тёмными вертикальными полосами.',
         characteristics: {
             size: 'medium (12-15 cm)',
-            color: ["brown", "gold", "black"],
-            features: ["head-down swimming", "vertical bands", "unique"],
-            habitat: ["South America", "slow waters", "planted areas"],
-            behavior: ["peaceful", "active", "unusual"]
+            color: ['brown', 'gold', 'black'],
+            features: ['head-down swimming', 'vertical bands', 'unique'],
+            habitat: ['South America', 'slow waters', 'planted areas'],
+            behavior: ['peaceful', 'active', 'unusual']
         }
-    }
-            color: ['silver', 'black', 'white'],
-            features: ['triangular body', 'long flowing fins', 'vertical black stripes'],
-            habitat: ['Amazon basin', 'slow-moving rivers', 'flooded forests'],
-            behavior: ['graceful swimming', 'omnivorous', 'pair bonding', 'territorial']
-        }
-    }
-,
+    },
     {
         id: 'neon-tetra',
         name_en: 'Neon Tetra',

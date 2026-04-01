@@ -457,6 +457,23 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSpeciesGrid();
     updateSpeciesSelect();
     renderSightings();
+    
+    // Hide VK loading screen
+    setTimeout(() => {
+        const loadingScreen = document.getElementById('vk-loading');
+        if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 300);
+        }
+    }, 500);
+    
+    // Tell VK app is ready
+    if (window.vkBridge) {
+        vkBridge.send('VKWebAppSetViewSettings', { status_bar_style: 'light' });
+    }
 });
 
 // VK Bridge Initialization

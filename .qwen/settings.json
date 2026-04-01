@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "Bash(open *)",
+      "Bash(cp *)",
+      "Bash(ls *)",
+      "Bash(python3 *)",
+      "Bash(kill *)",
+      "Bash(grep *)",
+      "Bash(npx *)",
+      "Bash(curl *)"
+    ]
+  },
+  "$version": 3
+}
