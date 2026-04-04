@@ -1176,7 +1176,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    }}}},
+    },
     {
         id: 'gold-barb',
         name_en: 'Gold Barb',
