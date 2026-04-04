@@ -1328,7 +1328,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    }},
+    },
     {
         id: 'celestial-pearl-danio',
         name_en: 'Celestial Pearl Danio',
@@ -1480,7 +1480,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    }}}}},
+    },
     {
         id: 'endlers-guppy',
         name_en: 'Endler\'s Guppy',
@@ -1499,7 +1499,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    }}},
+    },
     {
         id: 'oscar',
         name_en: 'Oscar Fish',
@@ -1537,7 +1537,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    }}}}},
+    },
     {
         id: 'bristlenose-pleco',
         name_en: 'Bristlenose Pleco',
@@ -1575,7 +1575,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    }}}}},
+    },
     {
         id: 'weather-loach',
         name_en: 'Weather Loach',
