@@ -1,177 +1,80 @@
 #!/usr/bin/env python3
-"""
-Download images for tropical fish species.
-Uses Wikimedia Commons API with thumbnail URLs.
+"""Download images for fish-river-tropical species from Wikimedia Commons."""
 
-Usage:
-    python3 download-tropical-fish.py              # Download all species
-    python3 download-tropical-fish.py --ocean      # Download ocean species only
-    python3 download-tropical-fish.py --river      # Download river species only
-    python3 download-tropical-fish.py --start 100  # Start from item 100
-"""
+import os, re, sys, time, urllib.request, json
 
-import os
-import re
-import sys
-import time
-import urllib.request
-import json
-from pathlib import Path
+OUTPUT_DIR = 'assets/images/fish-river-tropical'
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-def get_species_from_file():
-    """Extract species IDs, latin names, and environment from fish-tropical.js"""
+def get_species():
     species = {}
-    with open('/Users/svetik/Projects/bird-fish-h/fish-tropical.js', 'r', encoding='utf-8') as f:
+    with open('fish-river-tropical.js', 'r', encoding='utf-8') as f:
         content = f.read()
-
-    # Find all species blocks
-    block_pattern = r"\{\s*id:\s*'([^']+)'[^}]*?latin_name:\s*'([^']+)'[^}]*?environment:\s*'(ocean|river)'[^}]*?\}"
-    
-    matches = re.findall(block_pattern, content, re.DOTALL)
-    for species_id, latin_name, environment in matches:
-        species[species_id] = {
-            'latin_name': latin_name,
-            'environment': environment
-        }
-    
-    # Fallback for species without environment field
-    id_pattern = r"id:\s*'([^']+)'"
-    latin_pattern = r"latin_name:\s*'([^']+)'"
-    ids = re.findall(id_pattern, content)
-    latins = re.findall(latin_pattern, content)
-    
-    for i, id_name in enumerate(ids):
-        if id_name not in species and i < len(latins):
-            # Default to ocean for unknown species
-            species[id_name] = {
-                'latin_name': latins[i],
-                'environment': 'ocean'
-            }
-
+    block_pattern = r"\{\s*id:\s*'([^']+)'[^}]*?latin_name:\s*'([^']+)'[^}]*?\}"
+    for species_id, latin_name in re.findall(block_pattern, content, re.DOTALL):
+        species[species_id] = latin_name
     return species
 
-def search_wikimedia_commons(query):
-    """Search Wikimedia Commons for images using thumbnail API."""
-    search_url = f"https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=5&gsrsearch={query.replace(' ', '%20')}&prop=imageinfo&iiprop=url&iiurlwidth=640"
-
+def search_wikimedia(query):
+    url = f"https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=5&gsrsearch={query.replace(' ', '+')}&prop=imageinfo&iiprop=url&iiurlwidth=640"
     try:
-        req = urllib.request.Request(
-            search_url,
-            headers={'User-Agent': 'TropicalFishImageDownloader/1.0 (educational project)'}
-        )
-        with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode())
-
+        req = urllib.request.Request(url, headers={'User-Agent': 'FishTracker/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode())
         pages = data.get('query', {}).get('pages', {})
-        for page_id, page_data in pages.items():
-            if 'imageinfo' in page_data and len(page_data['imageinfo']) > 0:
-                img_info = page_data['imageinfo'][0]
-                if 'thumburl' in img_info:
-                    return img_info['thumburl']
-                elif 'url' in img_info:
-                    return img_info['url']
-    except Exception as e:
-        pass
-
+        for page in pages.values():
+            if 'imageinfo' in page:
+                info = page['imageinfo'][0]
+                if 'thumburl' in info:
+                    return info['thumburl']
+    except: pass
     return None
 
-def download_image(url, output_path):
-    """Download an image from URL to the specified path."""
+def download(url, path):
     try:
-        req = urllib.request.Request(
-            url,
-            headers={'User-Agent': 'Mozilla/5.0 (compatible; TropicalFishImageDownloader/1.0)'}
-        )
-        with urllib.request.urlopen(req, timeout=90) as response:
-            with open(output_path, 'wb') as f:
-                f.write(response.read())
+        req = urllib.request.Request(url, headers={'User-Agent': 'FishTracker/1.0'})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = resp.read()
+        with open(path, 'wb') as f:
+            f.write(data)
+        print(f"  ✓ {len(data)//1024}KB")
         return True
     except Exception as e:
-        print(f"  Error downloading: {e}")
+        print(f"  ✗ {e}")
         return False
 
-def main():
-    output_dir = Path('/Users/svetik/Projects/bird-fish-h/images/tropical-fish')
-    output_dir.mkdir(parents=True, exist_ok=True)
+species = get_species()
+print(f"Found {len(species)} species")
 
-    # Parse command line arguments
-    environment_filter = None
-    start_index = 0
+success = skipped = failed = 0
+
+for i, (sid, latin) in enumerate(species.items(), 1):
+    path = os.path.join(OUTPUT_DIR, f"{sid}.jpg")
+    if os.path.exists(path):
+        print(f"[{i}/{len(species)}] {sid} - exists")
+        skipped += 1
+        continue
     
-    i = 1
-    while i < len(sys.argv):
-        if sys.argv[i] == '--ocean':
-            environment_filter = 'ocean'
-        elif sys.argv[i] == '--river':
-            environment_filter = 'river'
-        elif sys.argv[i] == '--start':
-            if i + 1 < len(sys.argv):
-                start_index = int(sys.argv[i + 1])
-                i += 1
-        i += 1
-
-    species = get_species_from_file()
+    print(f"[{i}/{len(species)}] {sid} ({latin})")
     
-    # Filter by environment if specified
-    if environment_filter:
-        species = {k: v for k, v in species.items() if v['environment'] == environment_filter}
-        print(f"Filtering by environment: {environment_filter.upper()}")
+    # Try latin name first
+    url = search_wikimedia(latin)
+    if not url:
+        # Try with fish
+        url = search_wikimedia(f"{latin} fish")
+    if not url:
+        # Try common name
+        url = search_wikimedia(sid.replace('-', ' '))
     
-    total = len(species)
-    success_count = 0
-    rate_limit_delay = 10  # seconds between requests
-
-    print(f"Downloading images for {total} tropical fish species...")
-    print(f"Output directory: {output_dir}")
-    if start_index > 0:
-        print(f"Starting from item {start_index}...")
-    print("-" * 60)
-
-    # Convert to list
-    species_list = list(species.items())
-    
-    # Slice if start_index specified
-    if start_index > 0:
-        species_list = species_list[start_index:]
-    
-    for i, (species_id, species_data) in enumerate(species_list, start=start_index):
-        latin_name = species_data['latin_name']
-        environment = species_data['environment']
-        
-        print(f"[{i + 1}/{total}] Processing {species_id} ({latin_name}) [{environment}]...")
-
-        output_path = output_dir / f"{species_id}.jpg"
-
-        # Skip if already exists
-        if output_path.exists():
-            print(f"  ✓ Already exists, skipping...")
-            success_count += 1
+    if url:
+        print(f"  Found: {url.split('/')[-1]}")
+        if download(url, path):
+            success += 1
+            time.sleep(1)  # Increased delay to avoid 429
             continue
+    
+    print(f"  ✗ Not found")
+    failed += 1
+    time.sleep(1)  # Increased delay
 
-        # Search using latin name first, then common name
-        image_url = search_wikimedia_commons(latin_name)
-
-        if not image_url:
-            # Try with common name (convert id to readable format)
-            common_name = species_id.replace('-', ' ').title()
-            image_url = search_wikimedia_commons(common_name)
-
-        if image_url:
-            print(f"  Downloading...")
-            if download_image(image_url, output_path):
-                print(f"  ✓ Downloaded successfully!")
-                success_count += 1
-            else:
-                print(f"  ✗ Download failed")
-        else:
-            print(f"  ✗ No image found")
-
-        # Delay to avoid rate limiting
-        time.sleep(rate_limit_delay)
-
-    print("-" * 60)
-    print(f"Completed: {success_count}/{total} images downloaded")
-    print(f"Images saved to: {output_dir}")
-
-if __name__ == '__main__':
-    main()
+print(f"\n✓ {success} downloaded, ⊘ {skipped} exists, ✗ {failed} failed")

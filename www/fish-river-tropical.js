@@ -1176,64 +1176,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    },
-    {
-        id: 'cherry-barb',
-        name_en: 'Cherry Barb',
-        name_ru: 'Вишнёвый барбус',
-        latin_name: 'Puntius titteya',
-        family: 'Cyprinidae',
-        family_ru: 'Карповые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'tiger-barb',
-        name_en: 'Tiger Barb',
-        name_ru: 'Тигровый барбус',
-        latin_name: 'Puntigrus tetrazona',
-        family: 'Cyprinidae',
-        family_ru: 'Карповые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'rosy-barb',
-        name_en: 'Rosy Barb',
-        name_ru: 'Розовый барбус',
-        latin_name: 'Pethia conchonius',
-        family: 'Cyprinidae',
-        family_ru: 'Карповые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
+    }}}},
     {
         id: 'gold-barb',
         name_en: 'Gold Barb',
@@ -1385,26 +1328,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    },
-    {
-        id: 'giant-danio',
-        name_en: 'Giant Danio',
-        name_ru: 'Гигантский данио',
-        latin_name: 'Devario aequipinnatus',
-        family: 'Cyprinidae',
-        family_ru: 'Карповые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
+    }},
     {
         id: 'celestial-pearl-danio',
         name_en: 'Celestial Pearl Danio',
@@ -1556,83 +1480,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    },
-    {
-        id: 'guppy',
-        name_en: 'Guppy',
-        name_ru: 'Гуппи',
-        latin_name: 'Poecilia reticulata',
-        family: 'Poeciliidae',
-        family_ru: 'Пецилиевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'molly',
-        name_en: 'Molly Fish',
-        name_ru: 'Моллинезия',
-        latin_name: 'Poecilia sphenops',
-        family: 'Poeciliidae',
-        family_ru: 'Пецилиевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'platy',
-        name_en: 'Platy Fish',
-        name_ru: 'Пецилия',
-        latin_name: 'Xiphophorus maculatus',
-        family: 'Poeciliidae',
-        family_ru: 'Пецилиевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'swordtail',
-        name_en: 'Swordtail',
-        name_ru: 'Меченосец',
-        latin_name: 'Xiphophorus hellerii',
-        family: 'Poeciliidae',
-        family_ru: 'Пецилиевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
+    }}}}},
     {
         id: 'endlers-guppy',
         name_en: 'Endler\'s Guppy',
@@ -1651,45 +1499,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    },
-    {
-        id: 'angelfish',
-        name_en: 'Freshwater Angelfish',
-        name_ru: 'Пресноводный скалярий',
-        latin_name: 'Pterophyllum scalare',
-        family: 'Cichlidae',
-        family_ru: 'Цихловые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'discus',
-        name_en: 'Discus',
-        name_ru: 'Дискус',
-        latin_name: 'Symphysodon aequifasciatus',
-        family: 'Cichlidae',
-        family_ru: 'Цихловые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
+    }}},
     {
         id: 'oscar',
         name_en: 'Oscar Fish',
@@ -1727,83 +1537,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    },
-    {
-        id: 'ram-cichlid',
-        name_en: 'Ram Cichlid',
-        name_ru: 'Бабочка-апистограмма',
-        latin_name: 'Mikrogeophagus ramirezi',
-        family: 'Cichlidae',
-        family_ru: 'Цихловые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'corydoras-panda',
-        name_en: 'Panda Corydoras',
-        name_ru: 'Коридорас панда',
-        latin_name: 'Corydoras panda',
-        family: 'Callichthyidae',
-        family_ru: 'Панцирные сомы',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'corydoras-aeneus',
-        name_en: 'Bronze Corydoras',
-        name_ru: 'Бронзовый коридорас',
-        latin_name: 'Corydoras aeneus',
-        family: 'Callichthyidae',
-        family_ru: 'Панцирные сомы',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'otocinclus',
-        name_en: 'Otocinclus',
-        name_ru: 'Отоцинклюс',
-        latin_name: 'Otocinclus vestitus',
-        family: 'Loricariidae',
-        family_ru: 'Кольчужные сомы',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
+    }}}}},
     {
         id: 'bristlenose-pleco',
         name_en: 'Bristlenose Pleco',
@@ -1841,83 +1575,7 @@ export const riverTropicalFish = [
             habitat: ['tropical rivers', 'streams', 'aquariums'],
             behavior: ['peaceful', 'community fish', 'aquarium dwelling']
         }
-    },
-    {
-        id: 'clown-loach',
-        name_en: 'Clown Loach',
-        name_ru: 'Боция-клоун',
-        latin_name: 'Chromobotia macracanthus',
-        family: 'Botiidae',
-        family_ru: 'Боциевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'kuhli-loach',
-        name_en: 'Kuhli Loach',
-        name_ru: 'Вьюн кули',
-        latin_name: 'Pangio kuhlii',
-        family: 'Cobitidae',
-        family_ru: 'Вьюновые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'yo-yo-loach',
-        name_en: 'Yo-Yo Loach',
-        name_ru: 'Боция йо-йо',
-        latin_name: 'Botia almorhae',
-        family: 'Botiidae',
-        family_ru: 'Боциевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
-    {
-        id: 'zebra-loach',
-        name_en: 'Zebra Loach',
-        name_ru: 'Боция-зебра',
-        latin_name: 'Botia striata',
-        family: 'Botiidae',
-        family_ru: 'Боциевые',
-        category: 'tropical',
-        environment: 'river',
-        description_en: 'Popular freshwater tropical aquarium fish species.',
-        description_ru: 'Популярный вид пресноводных тропических аквариумных рыб.',
-        characteristics: {
-            size: 'small to medium',
-            color: ['colorful', 'varied'],
-            features: ['tropical freshwater species'],
-            habitat: ['tropical rivers', 'streams', 'aquariums'],
-            behavior: ['peaceful', 'community fish', 'aquarium dwelling']
-        }
-    },
+    }}}}},
     {
         id: 'weather-loach',
         name_en: 'Weather Loach',

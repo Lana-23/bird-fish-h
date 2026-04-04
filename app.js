@@ -279,6 +279,36 @@ function getImagePath(speciesId, category) {
     return `./assets/images/${speciesId}.jpg`;
 }
 
+// Get thumbnail path for species (optimized for grid view)
+function getThumbnailPath(speciesId, category) {
+    // Check explicit mapping first
+    if (speciesImagePaths[speciesId]) {
+        const path = speciesImagePaths[speciesId];
+        const fileName = path.split('/').pop().replace(/\.(jpg|jpeg|png|webp)$/i, '.jpg');
+        return `./assets/thumbnails/${path.split('/').slice(0, -1).join('/')}/${fileName}`;
+    }
+
+    // Build thumbnail path based on category
+    if (category === 'european') {
+        return `./assets/thumbnails/birds-european/${speciesId}.jpg`;
+    } else if (category === 'tropical' && (speciesId.includes('bird') || ['hummingbird', 'toucan', 'flamingo', 'pelican', 'penguin', 'quetzal', 'paradise-bird', 'scarlet-macaw'].includes(speciesId))) {
+        return `./assets/thumbnails/birds-tropical/${speciesId}.jpg`;
+    } else if (category === 'river') {
+        return `./assets/thumbnails/fish-river/${speciesId}.jpg`;
+    } else if (category === 'mediterranean') {
+        return `./assets/thumbnails/fish-mediterranean/${speciesId}.jpg`;
+    } else if (category === 'tropical') {
+        const riverTropicalIds = ['angelfish', 'discus', 'oscar', 'neon-tetra', 'cardinal-tetra', 'guppy', 'molly', 'platy', 'swordtail', 'betta', 'dwarf-gourami', 'pearl-gourami', 'clown-loach', 'kuhli-loach', 'corydoras', 'pleco', 'otocinclus'];
+        if (riverTropicalIds.includes(speciesId) || speciesId.includes('tetra') || speciesId.includes('gourami') || speciesId.includes('barb') || speciesId.includes('danio') || speciesId.includes('rasbora') || speciesId.includes('loach') || speciesId.includes('cichlid') || speciesId.includes('corydoras') || speciesId.includes('pleco') || speciesId.includes('otocinclus')) {
+            return `./assets/thumbnails/fish-river-tropical/${speciesId}.jpg`;
+        }
+        return `./assets/thumbnails/fish-tropical/${speciesId}.jpg`;
+    }
+
+    // Fallback
+    return `./assets/thumbnails/${speciesId}.jpg`;
+}
+
 // Import species data
 import { europeanBirds } from './birds-european.js';
 import { tropicalBirds } from './birds-tropical.js';
@@ -421,7 +451,7 @@ const i18n = {
 const speciesData = { birds, fish };
 
 // Application State
-let currentLanguage = 'en';
+let currentLanguage = 'ru';
 let currentTab = 'birds';
 let currentCategory = 'all';
 let currentSearchQuery = { birds: '', fish: '' };
@@ -1076,17 +1106,22 @@ function renderSpeciesGrid() {
         return nameA.localeCompare(nameB, currentLanguage === 'ru' ? 'ru' : 'en');
     });
 
-    grid.innerHTML = filtered.map(species => `
+    grid.innerHTML = filtered.map(species => {
+        const thumbPath = getThumbnailPath(species.id, species.category);
+        const fullPath = getImagePath(species.id, species.category);
+        
+        return `
         <div class="species-card" data-species-id="${species.id}" data-type="${type}">
-            <div class="species-image has-image" style="background-image: url('${getImagePath(species.id, species.category)}?v=${Date.now()}'); background-size: cover; background-position: center;" title="Loading image for ${species.id}">
+            <div class="species-image" title="${getSpeciesName(species)}">
+                <img class="species-thumb" src="${thumbPath}" alt="${getSpeciesName(species)}" onerror="this.parentElement.style.backgroundImage='url(${fullPath})'; this.parentElement.classList.add('has-image'); this.style.display='none';">
             </div>
             <div class="species-info">
                 <div class="species-name">${getSpeciesName(species)}</div>
                 <div class="species-category">${t(species.category)}</div>
             </div>
         </div>
-    `).join('');
-    
+    `}).join('');
+
     // Add click handlers to species cards
     grid.querySelectorAll('.species-card').forEach(card => {
         card.addEventListener('click', () => {
