@@ -383,6 +383,14 @@ const i18n = {
         guide_language_text: 'Use the language selector in the top navigation to switch between English and Russian. Click the moon/sun icon to toggle between dark and light themes.',
         guide_login: 'Login (Optional)',
         guide_login_text: 'Click "Login" to enter your email and save sightings to the cloud. Without logging in, your data is saved only in this browser. Login allows you to access your sightings from multiple devices (cloud sync feature requires server implementation).',
+        intro_title: '🦅 🐟 Bird & Fish Tracker',
+        intro_description: 'Welcome to your personal wildlife tracking companion! Discover and log birds and fish species with ease.',
+        intro_features_title: 'Key Features:',
+        intro_feature1: 'Browse thousands of bird and fish species',
+        intro_feature2: 'Log sightings with photos and notes',
+        intro_feature3: 'Track statistics and view patterns',
+        intro_feature4: 'Data saved locally in your browser',
+        intro_getstarted: 'Get Started',
     },
     ru: {
         app_title: '🦅 🐟 Трекер',
@@ -444,6 +452,14 @@ const i18n = {
         guide_language_text: 'Используйте селектор языка в верхней навигации для переключения между английским и русским. Нажмите на значок луны/солнца для переключения между темной и светлой темами.',
         guide_login: 'Вход (опционально)',
         guide_login_text: 'Нажмите «Войти», чтобы ввести свой email и сохранить наблюдения в облаке. Без входа ваши данные сохраняются только в этом браузере. Вход позволяет получить доступ к вашим наблюдениям с нескольких устройств (функция синхронизации с облаком требует реализации на сервере).',
+        intro_title: '🦅 🐟 Трекер птиц и рыб',
+        intro_description: 'Добро пожаловать в ваш личный компаньон для отслеживания дикой природы! Легко находите и регистрируйте виды птиц и рыб.',
+        intro_features_title: 'Основные возможности:',
+        intro_feature1: 'Просмотр тысяч видов птиц и рыб',
+        intro_feature2: 'Регистрация наблюдений с фото и заметками',
+        intro_feature3: 'Отслеживание статистики и анализ закономерностей',
+        intro_feature4: 'Данные сохраняются локально в браузере',
+        intro_getstarted: 'Начать',
     }
 };
 
@@ -481,6 +497,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initIndexedDB();
     setupEventListeners();
     setTodayDate();
+
+    // Show intro if first time user (check in localStorage)
+    const hasSeenIntro = localStorage.getItem('hasSeenIntro');
+    if (!hasSeenIntro) {
+        showIntroModal();
+    }
 
     // Render initial content
     currentCategory = 'all';
@@ -976,6 +998,16 @@ function setupEventListeners() {
             switchTab('sightings');
         }
     });
+
+    // Intro modal close and start button
+    document.getElementById('intro-start-btn')?.addEventListener('click', () => {
+        document.getElementById('intro-modal').classList.remove('active');
+    });
+    document.getElementById('intro-modal')?.addEventListener('click', (e) => {
+        if (e.target.id === 'intro-modal') {
+            document.getElementById('intro-modal').classList.remove('active');
+        }
+    });
 }
 
 // Tab Management
@@ -1109,11 +1141,11 @@ function renderSpeciesGrid() {
     grid.innerHTML = filtered.map(species => {
         const thumbPath = getThumbnailPath(species.id, species.category);
         const fullPath = getImagePath(species.id, species.category);
-        
+        const thumbPathWithVersion = `${thumbPath}?v=${Date.now()}`;
+
         return `
         <div class="species-card" data-species-id="${species.id}" data-type="${type}">
-            <div class="species-image" title="${getSpeciesName(species)}">
-                <img class="species-thumb" src="${thumbPath}" alt="${getSpeciesName(species)}" onerror="this.parentElement.style.backgroundImage='url(${fullPath})'; this.parentElement.classList.add('has-image'); this.style.display='none';">
+            <div class="species-image has-image" style="background-image: url('${thumbPathWithVersion}'); background-size: cover; background-position: center;" title="${getSpeciesName(species)}">
             </div>
             <div class="species-info">
                 <div class="species-name">${getSpeciesName(species)}</div>
@@ -1564,6 +1596,42 @@ function generateCalendarGrid(sightingsByDate) {
     }
 
     return grid;
+}
+
+// Show Intro Modal
+function showIntroModal() {
+    const modal = document.getElementById('intro-modal');
+    if (modal) {
+        // Update text based on current language
+        updateIntroText();
+        modal.classList.add('active');
+        
+        // Set flag so intro doesn't show again
+        localStorage.setItem('hasSeenIntro', 'true');
+    }
+}
+
+// Update Intro Modal Text Based on Language
+function updateIntroText() {
+    const t = currentLanguage === 'ru' ? i18n.ru : i18n.en;
+    
+    document.querySelector('#intro-modal h2[data-i18n-intro-title]').textContent = t.intro_title;
+    document.querySelector('.intro-description[data-i18n-intro-desc]').textContent = t.intro_description;
+    document.querySelector('.intro-features h3[data-i18n-intro-features-title]').textContent = t.intro_features_title;
+    
+    const feature1El = document.querySelector('[data-i18n-intro-feature1] span');
+    if (feature1El) feature1El.textContent = t.intro_feature1;
+    
+    const feature2El = document.querySelector('[data-i18n-intro-feature2] span');
+    if (feature2El) feature2El.textContent = t.intro_feature2;
+    
+    const feature3El = document.querySelector('[data-i18n-intro-feature3] span');
+    if (feature3El) feature3El.textContent = t.intro_feature3;
+    
+    const feature4El = document.querySelector('[data-i18n-intro-feature4] span');
+    if (feature4El) feature4El.textContent = t.intro_feature4;
+    
+    document.getElementById('intro-start-btn').textContent = t.intro_getstarted;
 }
 
 // Load dark mode preference

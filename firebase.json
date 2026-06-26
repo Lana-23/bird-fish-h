@@ -1,0 +1,23 @@
+{
+    "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+     "headers": [
+      {
+        "source": "**/*.md",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/markdown"
+          }
+        ]
+      }
+    ]
+  
+  }
+}
+

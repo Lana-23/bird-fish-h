@@ -46,8 +46,10 @@
       "Bash(git add *)",
       "Bash(sed *)",
       "Bash(git commit *)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(npm run *)",
+      "Bash(git checkout *)"
     ]
   },
-  "$version": 3
+  "$version": 4
 }
